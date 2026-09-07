@@ -6,11 +6,13 @@ import { fileURLToPath, pathToFileURL } from 'url';
 import {
   buildRankedItems,
   classifyKeyword,
+  isSuggestionRelevantToTopic,
   normalizeTitle,
   withStaleFallback
 } from './trend-core.js';
 import {
   mapLimit,
+  decodeBaiduBody,
   parseBaiduHot,
   parseBaiduSuggestions,
   parseBilibiliRanking,
@@ -45,7 +47,9 @@ async function fetchWithTimeout(url, responseType = 'json') {
   try {
     const response = await fetch(url, { headers: HEADERS, signal: controller.signal });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    return responseType === 'text' ? response.text() : response.json();
+    if (responseType === 'text') return response.text();
+    if (responseType === 'arrayBuffer') return response.arrayBuffer();
+    return response.json();
   } finally {
     clearTimeout(timeoutId);
   }
@@ -70,6 +74,12 @@ function directTopicSignals(topics) {
   });
 }
 
+function hasOutdatedYear(title, now) {
+  const currentYear = new Date(now).getUTCFullYear();
+  const years = normalizeTitle(title).match(/20\d{2}/g) || [];
+  return years.some((year) => Number(year) < currentYear);
+}
+
 export function createTrendingSnapshot({
   previous = {},
   topics = [],
@@ -83,6 +93,11 @@ export function createTrendingSnapshot({
     const suggestions = Array.isArray(result?.suggestions) ? result.suggestions : [];
     suggestions.forEach((title, index) => {
       if (!classifyKeyword(title, { seedKind: result.seedKind })) return;
+      if (hasOutdatedYear(title, now)) return;
+      if (
+        result.topicTitle
+        && !isSuggestionRelevantToTopic(result.topicTitle, title)
+      ) return;
       signals.push({
         title,
         source: result.source,
@@ -194,18 +209,21 @@ function buildSuggestionQueries(topics) {
   const expanded = uniqueTopTopics(topics).flatMap((topic) => [
     {
       query: `${topic.title} 下载`,
+      topicTitle: topic.title,
       seedKind: 'downloads',
       source: `百度联想 · ${topic.source}`,
       directHotRank: topic.rank
     },
     {
       query: `${topic.title} 下载教程`,
+      topicTitle: topic.title,
       seedKind: 'downloads',
       source: `百度联想 · ${topic.source}`,
       directHotRank: topic.rank
     },
     {
       query: `${topic.title} 拼豆图纸`,
+      topicTitle: topic.title,
       seedKind: 'perler',
       source: `百度联想 · ${topic.source}`,
       directHotRank: topic.rank
@@ -220,7 +238,7 @@ async function getSuggestions(topics) {
   const results = await mapLimit(queries, 5, async (query) => {
     const url = `https://suggestion.baidu.com/su?wd=${encodeURIComponent(query.query)}&cb=window.baidu.sug`;
     try {
-      const body = await fetchWithTimeout(url, 'text');
+      const body = decodeBaiduBody(await fetchWithTimeout(url, 'arrayBuffer'));
       succeeded += 1;
       return { ...query, suggestions: parseBaiduSuggestions(body) };
     } catch (error) {

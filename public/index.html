@@ -3,1078 +3,791 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>热点聚合 - Trending Hub</title>
-  <meta name="description" content="实时聚合 X/Twitter、TikTok、Bilibili、YouTube、Instagram、微博等平台热点">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+  <meta name="description" content="只追踪下载与拼豆图纸两类可能爆发的中文搜索关键词">
+  <meta name="color-scheme" content="light">
+  <title>跟风关键词雷达</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
   <style>
     :root {
-      --bg-primary: #0f0f0f;
-      --bg-secondary: #1a1a1a;
-      --bg-card: #242424;
-      --text-primary: #ffffff;
-      --text-secondary: #a0a0a0;
-      --accent: #ff6b35;
-      --accent-hover: #ff8c5a;
-      --border: #333333;
-      --twitter: #1da1f2;
-      --tiktok: #ff0050;
-      --bilibili: #00a1d6;
-      --youtube: #ff0000;
-      --instagram: #e1306c;
-      --weibo: #e6162d;
-      --zhihu: #0066ff;
-      --baidu: #2932e1;
-      --douyin: #000000;
+      --ink: #202532;
+      --muted: #6f7787;
+      --line: #e6e8ee;
+      --paper: #ffffff;
+      --canvas: #f5f6f9;
+      --download: #ff6b3d;
+      --perler: #8068e8;
+      --rise: #df3046;
+      --rise-soft: #fff0f2;
+      --new: #3f6fd9;
+      --new-soft: #eef4ff;
+      --shadow: 0 12px 36px rgba(31, 39, 55, 0.08);
     }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
+
+    * { box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      line-height: 1.6;
+      margin: 0;
       min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 0%, rgba(128, 104, 232, .08), transparent 25rem),
+        radial-gradient(circle at 90% 8%, rgba(255, 107, 61, .08), transparent 24rem),
+        var(--canvas);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
     }
-    
-    .header {
-      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
-      padding: 2rem;
-      text-align: center;
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(10px);
+
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button:focus-visible, a:focus-visible { outline: 3px solid rgba(63, 111, 217, .3); outline-offset: 3px; }
+
+    .shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 44px 0 52px; }
+    .masthead { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 22px; }
+    .eyebrow { margin: 0 0 8px; color: var(--rise); font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(28px, 4vw, 46px); line-height: 1.08; letter-spacing: -.04em; }
+    .intro { max-width: 620px; margin: 12px 0 0; color: var(--muted); font-size: 15px; line-height: 1.7; }
+    .summary { min-width: 180px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.75); text-align: right; }
+    .summary strong { display: block; font-size: 25px; line-height: 1; }
+    .summary span { display: block; margin-top: 7px; color: var(--muted); font-size: 12px; }
+
+    .toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
+    .filters { display: inline-flex; gap: 5px; padding: 5px; border: 1px solid var(--line); border-radius: 13px; background: var(--paper); box-shadow: 0 4px 16px rgba(31,39,55,.04); }
+    .filter { border: 0; border-radius: 9px; padding: 9px 14px; color: var(--muted); background: transparent; cursor: pointer; font: inherit; font-size: 13px; font-weight: 700; }
+    .filter:hover { color: var(--ink); background: var(--canvas); }
+    .filter.active { color: #fff; background: var(--ink); }
+    .updated { color: var(--muted); font-size: 12px; }
+
+    .category-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; align-items: start; }
+    .category-card { overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: var(--paper); box-shadow: var(--shadow); }
+    .category-card.hidden { display: none; }
+    .category-head { display: flex; align-items: center; gap: 12px; padding: 18px 20px; border-bottom: 1px solid var(--line); }
+    .category-icon { display: grid; width: 40px; height: 40px; place-items: center; flex: 0 0 auto; border-radius: 12px; color: #fff; font-size: 22px; font-weight: 900; }
+    .category-icon.downloads { background: linear-gradient(145deg, #ff855f, var(--download)); }
+    .category-icon.perler { background: linear-gradient(145deg, #a492f0, var(--perler)); }
+    .category-head h2 { margin: 0; font-size: 17px; }
+    .category-head p { margin: 3px 0 0; color: var(--muted); font-size: 11px; }
+    .count { margin-left: auto; padding: 4px 8px; border-radius: 99px; color: var(--muted); background: var(--canvas); font-size: 11px; white-space: nowrap; }
+    .stale-notice { padding: 9px 20px; color: #8b5a15; background: #fff8e8; border-bottom: 1px solid #f3e6c7; font-size: 11px; }
+
+    .trend-list { max-height: 680px; margin: 0; padding: 0; overflow-y: auto; list-style: none; }
+    .trend-row { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 11px; align-items: start; padding: 15px 20px; border-bottom: 1px solid var(--line); }
+    .trend-row:last-child { border-bottom: 0; }
+    .trend-row:hover { background: #fafbfc; }
+    .rank { display: grid; width: 24px; height: 24px; place-items: center; border-radius: 7px; color: var(--muted); background: var(--canvas); font-size: 11px; font-weight: 800; }
+    .rank.top { color: #fff; background: var(--rise); }
+    .trend-main { min-width: 0; }
+    .keyword { display: inline; font-size: 14px; font-weight: 750; line-height: 1.45; text-decoration: none; overflow-wrap: anywhere; }
+    .keyword:hover { color: var(--new); text-decoration: underline; text-underline-offset: 3px; }
+    .meta { display: flex; flex-wrap: wrap; gap: 4px 10px; margin-top: 6px; color: var(--muted); font-size: 10px; line-height: 1.4; }
+    .stale-tag { color: #8b5a15; }
+    .trend-badge { margin-top: 1px; padding: 5px 8px; border-radius: 8px; font-size: 10px; font-weight: 800; white-space: nowrap; }
+    .trend-badge.rising { color: var(--rise); background: var(--rise-soft); }
+    .trend-badge.new { color: var(--new); background: var(--new-soft); }
+    .trend-badge.falling, .trend-badge.steady { color: var(--muted); background: var(--canvas); }
+    .empty { display: grid; gap: 6px; padding: 56px 24px; color: var(--muted); text-align: center; }
+    .empty strong { color: var(--ink); font-size: 14px; }
+    .empty span { font-size: 11px; }
+
+    .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 18px; padding: 0 4px; color: var(--muted); font-size: 11px; }
+    .sources { display: flex; flex-wrap: wrap; gap: 10px; }
+    .source { display: inline-flex; align-items: center; gap: 5px; }
+    .source i { width: 6px; height: 6px; border-radius: 50%; background: #aab0bd; }
+    .source.ok i { background: #26a269; }
+    .source.down i { background: #df3046; }
+
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 20px, 620px); padding-top: 26px; }
+      .masthead { align-items: start; flex-direction: column; }
+      .summary { width: 100%; text-align: left; }
+      .toolbar { align-items: stretch; flex-direction: column; }
+      .filters { display: grid; grid-template-columns: repeat(3, 1fr); }
+      .filter { padding-inline: 8px; }
+      .category-grid { grid-template-columns: 1fr; }
+      .trend-row { grid-template-columns: 26px minmax(0, 1fr); padding: 14px; }
+      .trend-badge { grid-column: 2; justify-self: start; }
+      .category-head { padding-inline: 14px; }
     }
-    
-    .header h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      background: linear-gradient(135deg, var(--accent) 0%, #ff9f7a 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    
-    .header .subtitle {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-    }
-    
-    .last-updated {
-      margin-top: 0.5rem;
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-    }
-    
-    .tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      padding: 1rem 2rem;
-      background: var(--bg-secondary);
-      border-bottom: 1px solid var(--border);
-      justify-content: center;
-    }
-    
-    .tab {
-      padding: 0.5rem 1rem;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      background: var(--bg-card);
-      color: var(--text-secondary);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-size: 0.9rem;
-    }
-    
-    .tab:hover {
-      border-color: var(--accent);
-      color: var(--text-primary);
-    }
-    
-    .tab.active {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: white;
-    }
-    
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-    
-    .platforms-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 1.5rem;
-    }
-    
-    .platform-card {
-      background: var(--bg-card);
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .platform-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-    }
-    
-    .platform-card.hidden {
-      display: none;
-    }
-    
-    .platform-header {
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      border-bottom: 1px solid var(--border);
-    }
-    
-    .platform-header.twitter { border-left: 4px solid var(--twitter); }
-    .platform-header.tiktok { border-left: 4px solid var(--tiktok); }
-    .platform-header.bilibili { border-left: 4px solid var(--bilibili); }
-    .platform-header.youtube { border-left: 4px solid var(--youtube); }
-    .platform-header.instagram { border-left: 4px solid var(--instagram); }
-    .platform-header.weibo { border-left: 4px solid var(--weibo); }
-    .platform-header.zhihu { border-left: 4px solid var(--zhihu); }
-    .platform-header.baidu { border-left: 4px solid var(--baidu); }
-    .platform-header.douyin { border-left: 4px solid var(--douyin); }
-    .platform-header.toutiao { border-left: 4px solid #ff4500; }
-    
-    .platform-icon {
-      font-size: 1.5rem;
-    }
-    
-    .platform-name {
-      font-weight: 600;
-      font-size: 1.1rem;
-    }
-    
-    .platform-count {
-      margin-left: auto;
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-      background: var(--bg-secondary);
-      padding: 0.25rem 0.5rem;
-      border-radius: 10px;
-    }
-    
-    .trending-list {
-      max-height: 400px;
-      overflow-y: auto;
-    }
-    
-    .trending-list::-webkit-scrollbar {
-      width: 6px;
-    }
-    
-    .trending-list::-webkit-scrollbar-track {
-      background: var(--bg-secondary);
-    }
-    
-    .trending-list::-webkit-scrollbar-thumb {
-      background: var(--border);
-      border-radius: 3px;
-    }
-    
-    .trending-item {
-      display: flex;
-      align-items: center;
-      padding: 0.75rem 1.5rem;
-      gap: 1rem;
-      border-bottom: 1px solid var(--border);
-      transition: background 0.2s ease;
-      text-decoration: none;
-      color: inherit;
-    }
-    
-    .trending-item:hover {
-      background: var(--bg-secondary);
-    }
-    
-    .trending-item:last-child {
-      border-bottom: none;
-    }
-    
-    .rank {
-      width: 24px;
-      height: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      font-weight: 600;
-      border-radius: 4px;
-      background: var(--bg-secondary);
-      color: var(--text-secondary);
-      flex-shrink: 0;
-    }
-    
-    .rank.top3 {
-      background: var(--accent);
-      color: white;
-    }
-    
-    .trending-title {
-      flex: 1;
-      font-size: 0.9rem;
-      line-height: 1.4;
-      word-break: break-word;
-    }
-    
-    .no-data {
-      padding: 2rem;
-      text-align: center;
-      color: var(--text-secondary);
-    }
-    
-    .footer {
-      text-align: center;
-      padding: 2rem;
-      color: var(--text-secondary);
-      font-size: 0.85rem;
-      border-top: 1px solid var(--border);
-      margin-top: 2rem;
-    }
-    
-    .footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    
-    .refresh-notice {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--bg-card);
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      margin-top: 1rem;
-    }
-    
-    .pulse {
-      width: 8px;
-      height: 8px;
-      background: #4ade80;
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-    
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
-    }
-    
-    @media (max-width: 768px) {
-      .header h1 {
-        font-size: 1.5rem;
-      }
-      
-      .platforms-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .tabs {
-        padding: 1rem;
-      }
-      
-      .container {
-        padding: 1rem;
-      }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .filter, .trend-row, .keyword { transition: color .18s ease, background .18s ease; }
     }
   </style>
 </head>
 <body>
-  <header class="header">
-    <h1>🔥 热点聚合 Trending Hub</h1>
-    <p class="subtitle">实时追踪全球社交媒体热门话题</p>
-    <p class="last-updated">最后更新: <span id="lastUpdated">2026/9/7 16:29:14</span></p>
-    <div class="refresh-notice">
-      <span class="pulse"></span>
-      每30分钟自动刷新
+  <main class="shell">
+    <header class="masthead">
+      <div>
+        <p class="eyebrow">Trend Signal Monitor</p>
+        <h1>跟风关键词雷达</h1>
+        <p class="intro">只看下载与拼豆图纸两类可能爆发的搜索词。环比来自本站公开信号评分，不代表平台官方搜索量。</p>
+      </div>
+      <div class="summary"><strong>51</strong><span>本轮有效关键词</span></div>
+    </header>
+
+    <div class="toolbar">
+      <nav class="filters" aria-label="关键词分类筛选">
+        <button class="filter active" type="button" data-category="all" aria-pressed="true">全部</button>
+        <button class="filter" type="button" data-category="downloads" aria-pressed="false">下载热点</button>
+        <button class="filter" type="button" data-category="perler" aria-pressed="false">拼豆图纸</button>
+      </nav>
+      <span class="updated">更新于 09/07 17:31 · 每小时监测</span>
     </div>
-  </header>
-  
-  <nav class="tabs">
-    <button class="tab active" data-platform="all">全部</button>
-    
-    <button class="tab" data-platform="twitter">𝕏 X (Twitter)</button>
-    
-    <button class="tab" data-platform="bilibili">📺 Bilibili</button>
-    
-    <button class="tab" data-platform="instagram">📷 Instagram</button>
-    
-    <button class="tab" data-platform="zhihu">💡 知乎</button>
-    
-    <button class="tab" data-platform="baidu">🔍 百度热搜</button>
-    
-    <button class="tab" data-platform="toutiao">📰 今日头条</button>
-    
-  </nav>
-  
-  <main class="container">
-    <div class="platforms-grid">
-      
-      <div class="platform-card" data-platform="twitter">
-        <div class="platform-header twitter">
-          <span class="platform-icon">𝕏</span>
-          <span class="platform-name">X (Twitter)</span>
-          <span class="platform-count">30 条</span>
+
+    <div class="category-grid">
+      <section class="category-card" data-category="downloads" aria-labelledby="downloads-title">
+        <div class="category-head">
+          <span class="category-icon downloads">↧</span>
+          <div>
+            <h2 id="downloads-title">下载热点</h2>
+            <p>游戏、软件、App 与教程的下载意图词</p>
+          </div>
+          <span class="count">22 个词</span>
         </div>
-        <div class="trending-list">
-          
-          <a href="https://twitter.com/search?q=Gala" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank top3">1</span>
-            <span class="trending-title">Gala</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=%23Penny_Multibagger" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank top3">2</span>
-            <span class="trending-title">#Penny_Multibagger</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=%23LaCasaDeLosFamososM%C3%A9xico" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank top3">3</span>
-            <span class="trending-title">#LaCasaDeLosFamososMéxico</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=%23SWMRules2026" target="_blank" rel="noopener noreferrer" class="trending-item">
+        <ol class="trend-list">
+          <li class="trend-row">
+            <span class="rank top">1</span>
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E6%80%8E%E4%B9%88%E4%B8%8B%E8%BD%BD%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C" target="_blank" rel="noopener noreferrer">怎么下载我的世界</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:24</span>
+                <span>信号分 100</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
+            <span class="rank top">2</span>
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B%23%E6%88%8F%E6%9B%B2%E5%90%AC%E6%88%8F" target="_blank" rel="noopener noreferrer">下载教程#戏曲听戏</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:24</span>
+                <span>信号分 90</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
+            <span class="rank top">3</span>
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E5%A5%BD%E6%83%B3%E6%9D%A5app%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC" target="_blank" rel="noopener noreferrer">好想来app官网下载安装最新版本</a>
+              <div class="meta">
+                <span>百度联想 · 百度热搜</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 87</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">4</span>
-            <span class="trending-title">#SWMRules2026</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=%23%E0%B8%A2%E0%B8%B1%E0%B8%A7%E0%B8%A3%E0%B9%8C%E0%B8%97%E0%B8%B9%E0%B8%9A%E0%B9%80%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8CQ3" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD%E5%BE%AE%E4%BF%A1" target="_blank" rel="noopener noreferrer">app下载免费下载微信</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:24</span>
+                <span>信号分 80</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">5</span>
-            <span class="trending-title">#ยัวร์ทูบเบอร์Q3</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=YOURTUBER%20Q3" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B%E5%9C%B0%E5%9B%BE%E8%BD%AF%E4%BB%B6" target="_blank" rel="noopener noreferrer">下载教程地图软件</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:24</span>
+                <span>信号分 70</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">6</span>
-            <span class="trending-title">YOURTUBER Q3</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=%23LaGranjaVIP" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B%3A%E7%BD%91%E9%A1%B5%E9%93%BE%E6%8E%A5" target="_blank" rel="noopener noreferrer">下载教程:网页链接</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:24</span>
+                <span>信号分 60</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">7</span>
-            <span class="trending-title">#LaGranjaVIP</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=Whalien%2052" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E8%B1%86%E5%8C%85%E8%BD%AF%E4%BB%B6" target="_blank" rel="noopener noreferrer">app下载豆包软件</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:24</span>
+                <span>信号分 60</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">8</span>
-            <span class="trending-title">Whalien 52</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=%E3%83%81%E3%83%A3%E3%82%A2%E3%82%AF" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E5%A5%BD%E6%83%B3%E6%9D%A5%E5%AE%98%E6%96%B9%E4%B8%8B%E8%BD%BD" target="_blank" rel="noopener noreferrer">好想来官方下载</a>
+              <div class="meta">
+                <span>百度联想 · 百度热搜</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 57</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">9</span>
-            <span class="trending-title">チャアク</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=%E4%B8%80%E8%88%AC%E5%B8%B8%E8%AD%98" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BDvivo4.40%E6%AF%8F%E5%A4%A9%E6%97%A0%E9%99%90%E5%85%8D%E8%B4%B9%E5%A4%A7%E5%85%A8" target="_blank" rel="noopener noreferrer">软件下载vivo4.40每天无限免费大全</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:24</span>
+                <span>信号分 50</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">10</span>
-            <span class="trending-title">一般常識</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=Happy%20New%20Week" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C" target="_blank" rel="noopener noreferrer">下载教程我的世界</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:24</span>
+                <span>信号分 50</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">11</span>
-            <span class="trending-title">Happy New Week</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=Afya%20Kwanza" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD4.0.3%E5%85%8D%E8%B4%B9oppo%E5%AE%89%E8%A3%85" target="_blank" rel="noopener noreferrer">软件下载4.0.3免费oppo安装</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:24</span>
+                <span>信号分 40</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">12</span>
-            <span class="trending-title">Afya Kwanza</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=%E3%81%BB%E3%81%86%E3%81%98%E8%8C%B6" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E9%97%AA%E7%8E%A9%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B" target="_blank" rel="noopener noreferrer">闪玩下载教程</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:24</span>
+                <span>信号分 40</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">13</span>
-            <span class="trending-title">ほうじ茶</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=HBD%20LOLO%201%20YEAR" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E9%A1%B5i%E8%8C%85%E5%8F%B0" target="_blank" rel="noopener noreferrer">app下载页i茅台</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:29</span>
+                <span>信号分 40</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">14</span>
-            <span class="trending-title">HBD LOLO 1 YEAR</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=LOVERRUKK%201ST%20FLY%20TO%20NYFW" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E5%98%BF%E5%98%BF%E8%BF%9E%E8%BD%BD%E6%BC%AB%E7%94%BB%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B" target="_blank" rel="noopener noreferrer">嘿嘿连载漫画下载教程</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:29</span>
+                <span>信号分 30</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">15</span>
-            <span class="trending-title">LOVERRUKK 1ST FLY TO NYFW</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=JEON%20JUNGKOOK" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD3.0.3%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85oppo" target="_blank" rel="noopener noreferrer">软件下载3.0.3免费下载安装oppo</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:29</span>
+                <span>信号分 30</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">16</span>
-            <span class="trending-title">JEON JUNGKOOK</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=%E3%83%AC%E3%82%A4%E3%83%B3%E3%83%89%E3%83%83%E3%83%88" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%88%B0%E6%89%8B%E6%9C%BA%E4%B8%8A%E6%80%8E%E4%B9%88%E5%AE%89%E8%A3%85" target="_blank" rel="noopener noreferrer">app下载安装到手机上怎么安装</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:29</span>
+                <span>信号分 30</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">17</span>
-            <span class="trending-title">レインドット</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=Spring%20Day" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E8%9D%B6%E4%B9%8B%E6%AF%92%E5%8D%8E%E4%B9%8B%E9%94%81%E5%AE%89%E5%8D%93%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B" target="_blank" rel="noopener noreferrer">蝶之毒华之锁安卓下载教程</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:29</span>
+                <span>信号分 20</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">18</span>
-            <span class="trending-title">Spring Day</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=%E6%92%AE%E5%BD%B1%E8%A8%B1%E5%8F%AF" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%A4%A7%E5%85%A8OPPO" target="_blank" rel="noopener noreferrer">软件下载大全OPPO</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:29</span>
+                <span>信号分 20</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">19</span>
-            <span class="trending-title">撮影許可</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=%E3%83%81%E3%83%A7%E3%82%B3%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD%E5%B9%B3%E5%8F%B0%E6%9C%89%E5%93%AA%E4%BA%9B" target="_blank" rel="noopener noreferrer">游戏下载平台有哪些</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:29</span>
+                <span>信号分 20</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">20</span>
-            <span class="trending-title">チョコボックス</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=%E3%83%9B%E3%83%86%E3%83%AB%E5%81%B4" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%A4%A7%E5%85%A8%E5%85%8D%E8%B4%B9oppo" target="_blank" rel="noopener noreferrer">软件下载大全免费oppo</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 10</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">21</span>
-            <span class="trending-title">ホテル側</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=OFFROAD%20IFYF%20PRESSTOUR" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E4%B8%AD%E5%BF%83%E5%AE%98%E7%BD%91%E5%85%A5%E5%8F%A3" target="_blank" rel="noopener noreferrer">app下载中心官网入口</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 10</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">22</span>
-            <span class="trending-title">OFFROAD IFYF PRESSTOUR</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=MR%20FANBOY%20Q45" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">23</span>
-            <span class="trending-title">MR FANBOY Q45</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=US%20Market%20Secured" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">24</span>
-            <span class="trending-title">US Market Secured</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=More%20Jobs" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">25</span>
-            <span class="trending-title">More Jobs</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=Situasi%20Apapun%20Hadir" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">26</span>
-            <span class="trending-title">Situasi Apapun Hadir</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=Apio" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">27</span>
-            <span class="trending-title">Apio</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=Ka%C5%9Fif%20Kozino%C4%9Flu" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">28</span>
-            <span class="trending-title">Kaşif Kozinoğlu</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=Mchoice%20%26%20Mint%20Awards%202026" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">29</span>
-            <span class="trending-title">Mchoice &amp; Mint Awards 2026</span>
-          </a>
-          
-          <a href="https://twitter.com/search?q=Portsmouth" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">30</span>
-            <span class="trending-title">Portsmouth</span>
-          </a>
-          
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=CarXstreet%E5%AE%89%E5%8D%93%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B" target="_blank" rel="noopener noreferrer">CarXstreet安卓下载教程</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 10</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li></ol>
+      </section>
+      <section class="category-card" data-category="perler" aria-labelledby="perler-title">
+        <div class="category-head">
+          <span class="category-icon perler">▦</span>
+          <div>
+            <h2 id="perler-title">拼豆图纸</h2>
+            <p>热门人物、动漫、游戏与节日的拼豆搜索词</p>
+          </div>
+          <span class="count">29 个词</span>
         </div>
-      </div>
-      
-      <div class="platform-card" data-platform="bilibili">
-        <div class="platform-header bilibili">
-          <span class="platform-icon">📺</span>
-          <span class="platform-name">Bilibili</span>
-          <span class="platform-count">20 条</span>
-        </div>
-        <div class="trending-list">
-          
-          <a href="https://www.bilibili.com/video/BV1HBbE6cEc5" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank top3">1</span>
-            <span class="trending-title">《下一个是谁》第七季（4）</span>
-          </a>
-          
-          <a href="https://www.bilibili.com/video/BV16Htm6rE8n" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank top3">2</span>
-            <span class="trending-title">午夜轮班，伪人超市</span>
-          </a>
-          
-          <a href="https://www.bilibili.com/video/BV1sAbL6tEEC" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank top3">3</span>
-            <span class="trending-title">《崩坏：星穹铁道》千星纪游PV——「深水区」</span>
-          </a>
-          
-          <a href="https://www.bilibili.com/video/BV1aktB6KEA5" target="_blank" rel="noopener noreferrer" class="trending-item">
+        <ol class="trend-list">
+          <li class="trend-row">
+            <span class="rank top">1</span>
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E5%8D%8E%E4%B8%BAlogo%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8" target="_blank" rel="noopener noreferrer">华为logo拼豆图纸</a>
+              <div class="meta">
+                <span>百度联想 · 百度热搜</span>
+                <span>发现于 09/07 17:24</span>
+                <span>信号分 121</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
+            <span class="rank top">2</span>
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E5%8D%8E%E4%B8%BA%E4%B8%89%E6%8A%98%E5%8F%A0%E6%8B%BC%E8%B1%86%E6%95%99%E7%A8%8B" target="_blank" rel="noopener noreferrer">华为三折叠拼豆教程</a>
+              <div class="meta">
+                <span>百度联想 · 百度热搜</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 120</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
+            <span class="rank top">3</span>
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E5%A5%BD%E6%83%B3%E6%9D%A5%E6%8B%BC%E8%B1%86%E6%8B%BC%E6%96%97%E5%9B%BE%E6%A1%88%E6%A8%A1%E6%9D%BF" target="_blank" rel="noopener noreferrer">好想来拼豆拼斗图案模板</a>
+              <div class="meta">
+                <span>百度联想 · 百度热搜</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 117</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">4</span>
-            <span class="trending-title">手机发明之前，人们就是这样手书的……完整版！【bilibilionly同人扶持计划】</span>
-          </a>
-          
-          <a href="https://www.bilibili.com/video/BV1sxtk6YEGp" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E9%9B%B6%E9%A3%9F%E6%8B%BC%E8%B1%86200%E4%B8%AA" target="_blank" rel="noopener noreferrer">零食拼豆200个</a>
+              <div class="meta">
+                <span>百度联想 · 百度热搜</span>
+                <span>发现于 09/07 17:24</span>
+                <span>信号分 116</span>
+              </div>
+            </div>
+            <span class="trend-badge rising">信号环比 +1%</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">5</span>
-            <span class="trending-title">全B站最垃圾的一期视频</span>
-          </a>
-          
-          <a href="https://www.bilibili.com/video/BV1Xdt26bECx" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E5%8D%8E%E4%B8%BA%E6%89%8B%E6%9C%BA%E6%8B%BC%E8%B1%86" target="_blank" rel="noopener noreferrer">华为手机拼豆</a>
+              <div class="meta">
+                <span>百度联想 · 百度热搜</span>
+                <span>发现于 09/07 17:24</span>
+                <span>信号分 111</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">6</span>
-            <span class="trending-title">我把汉堡搬到了星星上</span>
-          </a>
-          
-          <a href="https://www.bilibili.com/video/BV1T2ti6REsF" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E6%89%8B%E6%9C%BA%E5%A3%B3%E5%8D%8E%E4%B8%BAX6%E5%9B%BE%E7%BA%B8%E5%A4%A7%E5%85%A8" target="_blank" rel="noopener noreferrer">拼豆手机壳华为X6图纸大全</a>
+              <div class="meta">
+                <span>百度联想 · 百度热搜</span>
+                <span>发现于 09/07 17:24</span>
+                <span>信号分 101</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">7</span>
-            <span class="trending-title">慢下来，就会死！</span>
-          </a>
-          
-          <a href="https://www.bilibili.com/video/BV1e8tR6EER5" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E9%9B%B6%E9%A3%9F%E5%93%81%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8" target="_blank" rel="noopener noreferrer">零食品拼豆图纸</a>
+              <div class="meta">
+                <span>百度联想 · 百度热搜</span>
+                <span>发现于 09/07 17:24</span>
+                <span>信号分 96</span>
+              </div>
+            </div>
+            <span class="trend-badge rising">信号环比 +13%</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">8</span>
-            <span class="trending-title">这次是真玩爽了</span>
-          </a>
-          
-          <a href="https://www.bilibili.com/video/BV12Sto6VEnH" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=1000%E7%A7%8D%E5%B0%8F%E9%9B%B6%E9%A3%9F%E6%8B%BC%E8%B1%86" target="_blank" rel="noopener noreferrer">1000种小零食拼豆</a>
+              <div class="meta">
+                <span>百度联想 · 百度热搜</span>
+                <span>发现于 09/07 17:24</span>
+                <span>信号分 86</span>
+              </div>
+            </div>
+            <span class="trend-badge rising">信号环比 +15%</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">9</span>
-            <span class="trending-title">这只猫，性格好到让我无语</span>
-          </a>
-          
-          <a href="https://www.bilibili.com/video/BV1UW8i6tEo1" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%94%9F%E6%88%90%E5%99%A8" target="_blank" rel="noopener noreferrer">拼豆图纸生成器</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 80</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">10</span>
-            <span class="trending-title">DECO*27 - 洗脳 feat. 初音未来</span>
-          </a>
-          
-          <a href="https://www.bilibili.com/video/BV1bHtd6CESR" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%8F%AF%E7%88%B1%E5%B0%8F%E5%9B%BE%E6%A1%88" target="_blank" rel="noopener noreferrer">拼豆图纸可爱小图案</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 70</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">11</span>
-            <span class="trending-title">天 雷 滚 滚 纽 约 城【神奇组织53】</span>
-          </a>
-          
-          <a href="https://www.bilibili.com/video/BV1NQti6HEaC" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E7%83%AD%E9%97%A8%E6%8B%BC%E8%B1%86%E5%BA%97%E6%8B%9B%E7%89%8C%E5%9B%BE%E7%89%87" target="_blank" rel="noopener noreferrer">热门拼豆店招牌图片</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:29</span>
+                <span>信号分 70</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">12</span>
-            <span class="trending-title">“请与我一同，战胜时间的伟力。”</span>
-          </a>
-          
-          <a href="https://www.bilibili.com/video/BV1wote6gEQ1" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E9%9B%B6%E9%A3%9F%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E9%95%BF%E4%BB%80%E4%B9%88%E6%A0%B7%E5%AD%90" target="_blank" rel="noopener noreferrer">零食拼豆图纸长什么样子</a>
+              <div class="meta">
+                <span>百度联想 · 百度热搜</span>
+                <span>发现于 09/07 17:24</span>
+                <span>信号分 66</span>
+              </div>
+            </div>
+            <span class="trend-badge rising">信号环比 +20%</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">13</span>
-            <span class="trending-title">《绝区零》克拉蕾角色展示 | 不想培训，但攻略已写好</span>
-          </a>
-          
-          <a href="https://www.bilibili.com/video/BV1Jpti63EA5" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%8D%8E%E4%B8%BA%E4%B8%89%E6%8A%98%E5%8F%A0" target="_blank" rel="noopener noreferrer">拼豆华为三折叠</a>
+              <div class="meta">
+                <span>百度联想 · 百度热搜</span>
+                <span>发现于 09/07 17:29</span>
+                <span>信号分 61</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">14</span>
-            <span class="trending-title">【苏新皓｜4K直拍】99次我爱他 直拍｜重·二周年演唱会 DAY3</span>
-          </a>
-          
-          <a href="https://www.bilibili.com/video/BV145t66AEfZ" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%AE%80%E5%8D%95%E5%8F%88%E5%A5%BD%E7%9C%8B" target="_blank" rel="noopener noreferrer">拼豆图纸简单又好看</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 60</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">15</span>
-            <span class="trending-title">当你吃出口腔溃疡时体内正在发生什么</span>
-          </a>
-          
-          <a href="https://www.bilibili.com/video/BV1kGto6BEiG" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E5%8D%8E%E4%B8%BA%E4%B8%89%E6%8A%98%E5%8F%A0%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8" target="_blank" rel="noopener noreferrer">华为三折叠拼豆图纸</a>
+              <div class="meta">
+                <span>百度联想 · 百度热搜</span>
+                <span>发现于 09/07 17:29</span>
+                <span>信号分 51</span>
+              </div>
+            </div>
+            <span class="trend-badge steady">信号持平</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">16</span>
-            <span class="trending-title">花600天做一道菜，切开的瞬间发光了！</span>
-          </a>
-          
-          <a href="https://www.bilibili.com/video/BV1X5bE62EbZ" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%BA%BF%E6%9D%A1%E5%B0%8F%E7%8B%97" target="_blank" rel="noopener noreferrer">拼豆图纸线条小狗</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 50</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">17</span>
-            <span class="trending-title">全网首发！爆肝3天！S11新NPC佐拉、唐吉任务线全流程攻略！完成后送口琴和火箭！可演奏可互动可入局！单人几乎无法完成！</span>
-          </a>
-          
-          <a href="https://www.bilibili.com/video/BV1BZtC68EXq" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E5%A5%87%E5%96%B5%E5%90%9B%E5%85%A8%E9%83%A8%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86" target="_blank" rel="noopener noreferrer">奇喵君全部角色拼豆</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 50</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">18</span>
-            <span class="trending-title">拉康：我们如何用一生，从别人那里偷来一个“我”？</span>
-          </a>
-          
-          <a href="https://www.bilibili.com/video/BV1s9tf6EE3N" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E6%B8%B8%E6%88%8F%E6%8B%BC%E8%B1%86%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D%E5%95%8A" target="_blank" rel="noopener noreferrer">游戏拼豆是什么意思啊</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 50</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">19</span>
-            <span class="trending-title">我好像找到了特别贴numb numb副歌音效的跳法…</span>
-          </a>
-          
-          <a href="https://www.bilibili.com/video/BV1jxt16cEdb" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E9%9B%B6%E9%A3%9F%E6%8B%BC%E8%B1%86%E5%B8%A6%E8%89%B2%E5%8F%B7%E7%9A%84%E5%9B%BE%E7%89%87" target="_blank" rel="noopener noreferrer">零食拼豆带色号的图片</a>
+              <div class="meta">
+                <span>百度联想 · 百度热搜</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 46</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">20</span>
-            <span class="trending-title">【B萌纪念mv】恭喜千早爱音加冕B萌萌王！【bilibilionly同人扶持计划】</span>
-          </a>
-          
-        </div>
-      </div>
-      
-      <div class="platform-card" data-platform="instagram">
-        <div class="platform-header instagram">
-          <span class="platform-icon">📷</span>
-          <span class="platform-name">Instagram</span>
-          <span class="platform-count">20 条</span>
-        </div>
-        <div class="trending-list">
-          
-          <a href="https://www.instagram.com/explore/tags/love/" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank top3">1</span>
-            <span class="trending-title">#love</span>
-          </a>
-          
-          <a href="https://www.instagram.com/explore/tags/instagood/" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank top3">2</span>
-            <span class="trending-title">#instagood</span>
-          </a>
-          
-          <a href="https://www.instagram.com/explore/tags/fashion/" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank top3">3</span>
-            <span class="trending-title">#fashion</span>
-          </a>
-          
-          <a href="https://www.instagram.com/explore/tags/photooftheday/" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">4</span>
-            <span class="trending-title">#photooftheday</span>
-          </a>
-          
-          <a href="https://www.instagram.com/explore/tags/photography/" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">5</span>
-            <span class="trending-title">#photography</span>
-          </a>
-          
-          <a href="https://www.instagram.com/explore/tags/beautiful/" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">6</span>
-            <span class="trending-title">#beautiful</span>
-          </a>
-          
-          <a href="https://www.instagram.com/explore/tags/art/" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">7</span>
-            <span class="trending-title">#art</span>
-          </a>
-          
-          <a href="https://www.instagram.com/explore/tags/picoftheday/" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">8</span>
-            <span class="trending-title">#picoftheday</span>
-          </a>
-          
-          <a href="https://www.instagram.com/explore/tags/nature/" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">9</span>
-            <span class="trending-title">#nature</span>
-          </a>
-          
-          <a href="https://www.instagram.com/explore/tags/happy/" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">10</span>
-            <span class="trending-title">#happy</span>
-          </a>
-          
-          <a href="https://www.instagram.com/explore/tags/follow/" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">11</span>
-            <span class="trending-title">#follow</span>
-          </a>
-          
-          <a href="https://www.instagram.com/explore/tags/travel/" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">12</span>
-            <span class="trending-title">#travel</span>
-          </a>
-          
-          <a href="https://www.instagram.com/explore/tags/style/" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">13</span>
-            <span class="trending-title">#style</span>
-          </a>
-          
-          <a href="https://www.instagram.com/explore/tags/instadaily/" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">14</span>
-            <span class="trending-title">#instadaily</span>
-          </a>
-          
-          <a href="https://www.instagram.com/explore/tags/reels/" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">15</span>
-            <span class="trending-title">#reels</span>
-          </a>
-          
-          <a href="https://www.instagram.com/explore/tags/like/" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">16</span>
-            <span class="trending-title">#like</span>
-          </a>
-          
-          <a href="https://www.instagram.com/explore/tags/fitness/" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">17</span>
-            <span class="trending-title">#fitness</span>
-          </a>
-          
-          <a href="https://www.instagram.com/explore/tags/life/" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">18</span>
-            <span class="trending-title">#life</span>
-          </a>
-          
-          <a href="https://www.instagram.com/explore/tags/beauty/" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">19</span>
-            <span class="trending-title">#beauty</span>
-          </a>
-          
-          <a href="https://www.instagram.com/explore/tags/food/" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">20</span>
-            <span class="trending-title">#food</span>
-          </a>
-          
-        </div>
-      </div>
-      
-      <div class="platform-card" data-platform="zhihu">
-        <div class="platform-header zhihu">
-          <span class="platform-icon">💡</span>
-          <span class="platform-name">知乎</span>
-          <span class="platform-count">0 条</span>
-        </div>
-        <div class="trending-list">
-          
-          <div class="no-data">暂无数据</div>
-          
-        </div>
-      </div>
-      
-      <div class="platform-card" data-platform="baidu">
-        <div class="platform-header baidu">
-          <span class="platform-icon">🔍</span>
-          <span class="platform-name">百度热搜</span>
-          <span class="platform-count">30 条</span>
-        </div>
-        <div class="trending-list">
-          
-          <a href="https://www.baidu.com/s?wd=%E4%B9%A0%E4%B8%BB%E5%B8%AD%E4%B8%AD%E4%BA%9A%E4%B8%AD%E4%B8%9C%E8%A1%8C%E7%9A%84%E4%B8%89%E7%82%B9%E5%90%AF%E7%A4%BA" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank top3">1</span>
-            <span class="trending-title">习主席中亚中东行的三点启示</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E5%8D%8E%E4%B8%BA%E6%97%B6%E9%9A%94%E5%85%AD%E5%B9%B4%E5%86%8D%E6%AC%A1%E5%8F%91%E5%B8%83%E9%AB%98%E6%80%A7%E8%83%BD%E8%8A%AF%E7%89%87" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank top3">2</span>
-            <span class="trending-title">华为时隔六年再次发布高性能芯片</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E5%A4%9A%E5%9C%B0%E6%A5%BC%E5%B8%82%E6%9C%89%E6%96%B0%E5%8F%98%E5%8C%96" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank top3">3</span>
-            <span class="trending-title">多地楼市有新变化</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=5%E5%B9%B4%E5%86%8D%E5%A2%9E%E7%BA%A610%E4%BA%BF%E2%80%9C%E9%A3%8E%E5%85%89%E2%80%9D%E6%84%8F%E5%91%B3%E7%9D%80%E4%BB%80%E4%B9%88" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">4</span>
-            <span class="trending-title">5年再增约10亿“风光”意味着什么</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E9%9B%B6%E9%A3%9F%E5%BA%971%E5%A4%A9%E6%B6%8C%E5%85%A56%E4%B8%87%E4%BA%BA%E5%A0%AA%E6%AF%94%E6%BC%94%E5%94%B1%E4%BC%9A" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">5</span>
-            <span class="trending-title">零食店1天涌入6万人堪比演唱会</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E5%8D%8E%E4%B8%BA%E5%8F%91%E5%B8%83%E4%BC%9A%20%E6%9C%80%E6%96%B0%E6%8A%98%E5%8F%A0%E5%B1%8F%E6%89%8B%E6%9C%BA%E4%BA%AE%E7%9B%B8" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">6</span>
-            <span class="trending-title">华为发布会 最新折叠屏手机亮相</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E6%94%BE%E5%81%873%E5%A4%A9%E4%B8%8D%E8%B0%83%E4%BC%91%E9%AB%98%E9%80%9F%E4%B8%8D%E5%85%8D%E8%B4%B9" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">7</span>
-            <span class="trending-title">中秋放假3天不调休高速不免费</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E5%8D%8E%E4%B8%BA%E4%B8%89%E6%8A%98%E5%8F%A0%20%E9%98%B2%E7%AA%A5" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">8</span>
-            <span class="trending-title">华为三折叠 防窥</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E5%8D%97%E9%98%B3%E2%80%9C%E8%80%81%E5%A4%B4%E4%B9%90%E2%80%9D%E9%80%80%E5%9C%BA%E5%BC%95%E5%87%BA%E5%85%A8%E5%9B%BD%E6%80%A7%E9%9A%BE%E9%A2%98" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">9</span>
-            <span class="trending-title">南阳“老头乐”退场引出全国性难题</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E5%8D%8E%E4%B8%BA%E6%9C%80%E6%96%B0%E4%B8%89%E6%8A%98%E5%8F%A0%E5%94%AE%E4%BB%B719999%E5%85%83%E8%B5%B7" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">10</span>
-            <span class="trending-title">华为最新三折叠售价19999元起</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E4%BD%9B%E5%BE%97%E8%A7%92%E5%AE%A3%E5%B8%83%E5%85%A8%E5%9B%BD%E9%99%8D%E5%8D%8A%E6%97%97" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">11</span>
-            <span class="trending-title">佛得角宣布全国降半旗</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E2%80%9C%E6%AF%81%E8%8D%89%E5%8E%9F%E7%A7%8D%E6%9E%B8%E6%9D%9E%E2%80%9D%E7%B3%BB%E8%B0%A3%E8%A8%80" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">12</span>
-            <span class="trending-title">“毁草原种枸杞”系谣言</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E6%9B%9D%E4%BA%95%E6%9F%8F%E7%84%B6%E5%88%98%E9%9B%AF%E5%B7%B2%E9%A2%86%E8%AF%81" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">13</span>
-            <span class="trending-title">曝井柏然刘雯已领证</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E5%A9%9A%E5%86%85%E5%BC%BA%E5%A5%B8%E6%A1%88%E8%A2%AB%E5%91%8A%E5%AE%B6%E5%B1%9E%E7%A7%B0%E5%85%B6%E8%80%81%E5%AE%9E%E6%9C%AC%E5%88%86" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">14</span>
-            <span class="trending-title">婚内强奸案被告家属称其老实本分</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E8%B4%B5%E5%B7%9E3%E5%90%8D%E6%9C%AA%E6%88%90%E5%B9%B4%E5%A5%B3%E5%AD%A9%E6%8E%A5%E8%BF%9E%E5%A4%B1%E8%81%94" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">15</span>
-            <span class="trending-title">贵州3名未成年女孩接连失联</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=31%E5%B2%81%E5%A5%B3%E4%BC%81%E5%88%92%E8%BF%9E%E7%86%AC%E6%95%B0%E5%A4%9C%E5%90%8E%E7%AA%81%E5%8F%91%E5%BF%83%E6%A2%97" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">16</span>
-            <span class="trending-title">31岁女企划连熬数夜后突发心梗</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E8%BF%99%E6%B3%BC%E5%A4%A9%E7%9A%84%E6%B5%81%E9%87%8F%20%E8%91%AB%E8%8A%A6%E7%88%B7%E7%88%B7%E7%9C%9F%E7%9A%84%E6%8E%A5%E4%B8%8D%E4%BD%8F" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">17</span>
-            <span class="trending-title">这泼天的流量 葫芦爷爷真的接不住</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E6%95%99%E5%B8%88%20%E6%89%8B%E6%9C%BA%E6%81%90%E6%83%A7%E7%97%87" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">18</span>
-            <span class="trending-title">教师 手机恐惧症</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E6%98%9F%E5%AE%87%E8%82%A1%E4%BB%BD4%E5%90%8D%E7%AE%A1%E7%90%86%E4%BA%BA%E5%91%98%E8%A2%AB%E5%A4%84%E7%90%86" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">19</span>
-            <span class="trending-title">星宇股份4名管理人员被处理</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E7%94%B7%E5%AD%90%E5%AE%B6%E9%97%A8%E5%8F%A3%E5%8F%91%E7%8E%B02%E7%B1%B3%E5%A4%9A%E9%95%BF%E5%AE%8C%E6%95%B4%E8%9B%87%E8%9C%95" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">20</span>
-            <span class="trending-title">男子家门口发现2米多长完整蛇蜕</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E8%B4%AB%E5%9B%B0%E7%94%9F%E8%83%BD%E4%B8%8D%E8%83%BD%E8%BF%BD%E6%98%9F" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%8F%AF%E7%88%B1" target="_blank" rel="noopener noreferrer">拼豆图纸可爱</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 40</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">21</span>
-            <span class="trending-title">贫困生能不能追星</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E7%94%B7%E5%AD%90%E8%A1%8C%E5%87%B6%E8%87%B4%E4%B8%80%E5%A5%B3%E5%AD%90%E6%AD%BB%E4%BA%A1%E5%90%8E%E8%B7%B3%E6%A5%BC%E8%BA%AB%E4%BA%A1" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E6%97%A0%E7%95%8F%E5%A5%91%E7%BA%A6%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86" target="_blank" rel="noopener noreferrer">无畏契约角色拼豆</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 40</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">22</span>
-            <span class="trending-title">男子行凶致一女子死亡后跳楼身亡</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E3%80%8A%E6%88%91%E7%9A%84%E5%89%8D%E5%8D%8A%E7%94%9F%E3%80%8B%E5%B9%B3%E5%84%BF%E6%89%AE%E6%BC%94%E8%80%85%E8%80%83%E5%85%A5%E4%B8%AD%E6%88%8F" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E6%B8%B8%E6%88%8F%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E8%B4%B4%E7%94%BB" target="_blank" rel="noopener noreferrer">游戏拼豆图纸贴画</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 40</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">23</span>
-            <span class="trending-title">《我的前半生》平儿扮演者考入中戏</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E6%99%AE%E4%BA%AC%E4%B9%98%E8%BD%A6%E7%A9%BF%E8%BF%87%E6%A3%AE%E6%9E%97%E6%97%B6%E5%87%BA%E7%8E%B0%E8%80%81%E8%99%8E" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E5%B4%A9%E9%93%81%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86" target="_blank" rel="noopener noreferrer">崩铁角色拼豆</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 30</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">24</span>
-            <span class="trending-title">普京乘车穿过森林时出现老虎</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E5%A5%B3%E5%AD%90%E5%A4%96%E5%87%BA%E5%96%9D%E9%85%92%203%E5%B2%81%E5%84%BF%E5%AD%90%E8%A2%AB%E5%8F%8D%E9%94%81%E5%9D%A0%E4%BA%A1" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E9%AC%BC%E7%81%AD%E4%B9%8B%E5%88%83" target="_blank" rel="noopener noreferrer">拼豆图纸鬼灭之刃</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 30</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">25</span>
-            <span class="trending-title">女子外出喝酒 3岁儿子被反锁坠亡</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E5%BE%8B%E5%B8%88%E8%A7%A3%E8%AF%BB%E5%A5%B3%E7%94%9F%E8%B5%B4%E6%B8%AF%E7%9C%8B%E6%BC%94%E5%94%B1%E4%BC%9A%E8%A2%AB%E5%8F%96%E6%B6%88%E4%BD%8E%E4%BF%9D" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E9%9B%B6%E9%A3%9F%E6%8B%BC%E8%B1%86200%E4%B8%AA%E5%9B%BE%E7%BA%B8" target="_blank" rel="noopener noreferrer">零食拼豆200个图纸</a>
+              <div class="meta">
+                <span>百度联想 · 百度热搜</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 26</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">26</span>
-            <span class="trending-title">律师解读女生赴港看演唱会被取消低保</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E9%83%91%E4%BD%A9%E4%BD%A9%E5%8E%BB%E4%B8%96%E5%90%8E%E6%8D%90%E8%B5%A0%E4%BA%86%E5%A4%A7%E8%84%91" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%B0%8F%E4%B8%80%E7%82%B9%E7%9A%84%E8%90%8C%E7%9A%84" target="_blank" rel="noopener noreferrer">拼豆图纸小一点的萌的</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 20</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">27</span>
-            <span class="trending-title">郑佩佩去世后捐赠了大脑</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E3%80%8A%E7%BB%99%E9%98%BF%E5%AC%B7%E7%9A%84%E6%83%85%E4%B9%A6%E3%80%8B%E7%8E%8B%E6%99%93%E6%85%A7%E7%96%91%E8%A6%81%E8%BF%9B%E5%9C%88" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E8%B5%B5%E9%9C%B2%E6%80%9DQ%E7%89%88%E4%B8%AA%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86" target="_blank" rel="noopener noreferrer">赵露思Q版个角色拼豆</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 20</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">28</span>
-            <span class="trending-title">《给阿嬷的情书》王晓慧疑要进圈</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E6%9D%8E%E8%8D%A3%E6%B5%A9%E6%BC%94%E5%94%B1%E4%BC%9A%E5%A5%B3%E5%AD%90%E4%B8%AD%E4%BA%B2%E7%AD%BE%E5%90%8E%E6%BF%80%E5%8A%A8%E6%99%95%E5%80%92" target="_blank" rel="noopener noreferrer" class="trending-item">
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86APP%E5%9B%BE90%E8%89%B2" target="_blank" rel="noopener noreferrer">角色拼豆APP图90色</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 10</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li>
+          <li class="trend-row">
             <span class="rank ">29</span>
-            <span class="trending-title">李荣浩演唱会女子中亲签后激动晕倒</span>
-          </a>
-          
-          <a href="https://www.baidu.com/s?wd=%E4%BA%BA%E6%B0%91%E6%97%A5%E6%8A%A5%E6%9B%9D%E5%85%89%E9%9D%9E%E6%B3%95%E7%A0%81%E5%A4%B44%E5%B9%B4%E5%85%B3%E4%B8%8D%E6%8E%89" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">30</span>
-            <span class="trending-title">人民日报曝光非法码头4年关不掉</span>
-          </a>
-          
-        </div>
-      </div>
-      
-      <div class="platform-card" data-platform="toutiao">
-        <div class="platform-header toutiao">
-          <span class="platform-icon">📰</span>
-          <span class="platform-name">今日头条</span>
-          <span class="platform-count">30 条</span>
-        </div>
-        <div class="trending-list">
-          
-          <a href="https://www.toutiao.com/trending/7682687188118539795/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%225%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682687188118539795%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%8D%8E%E4%B8%BA%E6%97%B6%E9%9A%94%E5%85%AD%E5%B9%B4%E5%86%8D%E6%AC%A1%E5%8F%91%E5%B8%83%E9%AB%98%E6%80%A7%E8%83%BD%E8%8A%AF%E7%89%87%22%7D&rank=&style_id=40132&topic_id=7682687188118539795" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank top3">1</span>
-            <span class="trending-title">华为时隔六年再次发布高性能芯片</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7681568347377401899/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%224%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227681568347377401899%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%8D%97%E9%98%B3%E2%80%9C%E8%80%81%E5%A4%B4%E4%B9%90%E2%80%9D%E9%80%80%E5%9C%BA%E5%BC%95%E5%87%BA%E5%85%A8%E5%9B%BD%E6%80%A7%E9%9A%BE%E9%A2%98%22%7D&rank=&style_id=40132&topic_id=7681568347377401899" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank top3">2</span>
-            <span class="trending-title">南阳“老头乐”退场引出全国性难题</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/article/7682604250580451875" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank top3">3</span>
-            <span class="trending-title">全国秋粮全面进入产量形成关键时期</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682240377843908627/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682240377843908627%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E7%89%B9%E6%9C%97%E6%99%AE%E6%A0%87%E5%BF%97%E6%80%A7%E9%87%91%E5%8F%91%E4%B8%8D%E8%A7%81%E4%BA%86%22%7D&rank=&style_id=40132&topic_id=7682240377843908627" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">4</span>
-            <span class="trending-title">特朗普标志性金发不见了</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7681940225756630571/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%221%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227681940225756630571%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E7%BE%8E%E6%9E%97%E8%82%AF%E5%8F%B7%E8%88%AA%E6%AF%8D%E5%AE%98%E5%85%B55%E5%A4%A9%E6%B6%88%E8%B4%B91%E4%BA%BF%E6%B3%B0%E9%93%A2%22%7D&rank=&style_id=40132&topic_id=7681940225756630571" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">5</span>
-            <span class="trending-title">美林肯号航母官兵5天消费1亿泰铢</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682658264911187506/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%2213%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682658264911187506%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E9%98%94%E6%8A%98%E5%8F%A0%E6%89%8B%E6%9C%BA%E4%B8%BA%E4%BB%80%E4%B9%88%E7%81%AB%E4%BA%86%22%7D&rank=&style_id=40132&topic_id=7682658264911187506" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">6</span>
-            <span class="trending-title">阔折叠手机为什么火了</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682442446395031598/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%226%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682442446395031598%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E9%AB%98%E8%80%83444%E5%88%86%E8%A2%AB%E6%AE%A1%E8%91%AC%E4%B8%93%E4%B8%9A%E5%BD%95%E5%8F%96%E7%94%B7%E5%AD%A9%E5%B7%B2%E5%85%A5%E5%AD%A6%22%7D&rank=&style_id=40132&topic_id=7682442446395031598" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">7</span>
-            <span class="trending-title">高考444分被殡葬专业录取男孩已入学</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682073467651227691/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%221%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682073467651227691%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%A4%9A%E5%9C%B0%E4%B8%A5%E6%9F%A5%E8%B5%B5%E4%B8%80%E9%B8%A3%E7%AD%89%E9%9B%B6%E9%A3%9F%E5%93%81%E7%89%8C%22%7D&rank=&style_id=40132&topic_id=7682073467651227691" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">8</span>
-            <span class="trending-title">多地严查赵一鸣等零食品牌</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682662385472421951/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%226%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682662385472421951%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E6%97%A5%E6%9C%AC%E7%94%B7%E5%AD%90%E6%8C%81%E5%88%80%E6%9D%80%E4%BA%BA%E5%B9%B6%E6%B3%BC%E6%B1%BD%E6%B2%B9%E7%BA%B5%E7%81%AB%E8%87%B43%E6%AD%BB%22%7D&rank=&style_id=40132&topic_id=7682662385472421951" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">9</span>
-            <span class="trending-title">日本男子持刀杀人并泼汽油纵火致3死</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682669886511497259/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%226%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682669886511497259%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E9%9D%92%E5%B9%B4%E6%A0%91%E4%B8%8B%E6%92%B8%E7%8B%97%E6%97%B6%E6%AF%92%E8%9B%87%E7%AA%81%E7%84%B6%E6%93%A6%E8%82%A9%E5%9D%A0%E8%90%BD%22%7D&rank=&style_id=40132&topic_id=7682669886511497259" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">10</span>
-            <span class="trending-title">青年树下撸狗时毒蛇突然擦肩坠落</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682685541991383059/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682685541991383059%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E6%B9%96%E5%8C%97%E6%9D%A5%E5%87%A4%E8%BE%9F%E8%B0%A3%E2%80%9C%E4%BF%AE%E5%9C%B0%E9%93%81%E6%8C%96%E5%87%BA%E6%96%BD%E5%B7%A5%E4%BA%BA%E5%91%98%E2%80%9D%22%7D&rank=&style_id=40132&topic_id=7682685541991383059" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">11</span>
-            <span class="trending-title">湖北来凤辟谣“修地铁挖出施工人员”</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682661917751512617/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%225%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682661917751512617%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E6%9B%9D%E4%BA%95%E6%9F%8F%E7%84%B6%E5%88%98%E9%9B%AF%E7%BB%93%E5%A9%9A%22%7D&rank=&style_id=40132&topic_id=7682661917751512617" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">12</span>
-            <span class="trending-title">曝井柏然刘雯结婚</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682629085624991798/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%226%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682629085624991798%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E9%83%91%E4%BD%A9%E4%BD%A9%E5%8E%BB%E4%B8%96%E5%90%8E%E6%8D%90%E8%B5%A0%E4%BA%86%E5%A4%A7%E8%84%91%22%7D&rank=&style_id=40132&topic_id=7682629085624991798" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">13</span>
-            <span class="trending-title">郑佩佩去世后捐赠了大脑</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682381951588941866/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%221%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682381951588941866%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E8%B4%A2%E6%94%BF%E9%83%A8%E5%B0%86%E5%8F%91%E8%A1%8C3000%E4%BA%BF%E7%89%B9%E5%88%AB%E5%9B%BD%E5%80%BA%22%7D&rank=&style_id=40132&topic_id=7682381951588941866" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">14</span>
-            <span class="trending-title">财政部将发行3000亿特别国债</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682277914222133290/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682277914222133290%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E4%B8%AD%E7%A7%8B%E6%94%BE%E5%81%873%E5%A4%A9%E4%B8%8D%E8%B0%83%E4%BC%91%E9%AB%98%E9%80%9F%E4%B8%8D%E5%85%8D%E8%B4%B9%22%7D&rank=&style_id=40132&topic_id=7682277914222133290" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">15</span>
-            <span class="trending-title">中秋放假3天不调休高速不免费</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682681620754661418/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%226%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682681620754661418%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22HarmonyOS+7%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83%22%7D&rank=&style_id=40132&topic_id=7682681620754661418" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">16</span>
-            <span class="trending-title">HarmonyOS 7正式发布</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7681822810075561994/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%228%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227681822810075561994%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E6%99%AE%E4%BA%AC%E4%B9%98%E8%BD%A6%E7%A9%BF%E8%BF%87%E6%A3%AE%E6%9E%97%E6%97%B6%E9%81%87%E5%88%B0%E8%80%81%E8%99%8E%22%7D&rank=&style_id=40132&topic_id=7681822810075561994" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">17</span>
-            <span class="trending-title">普京乘车穿过森林时遇到老虎</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682189960509804038/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%221%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682189960509804038%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%BC%A0%E9%9B%AA%E6%9C%BA%E8%BD%A6%E6%B3%95%E5%9B%BD%E7%AB%99%E6%AC%A1%E5%9B%9E%E5%90%88%E8%8E%B7%E5%BE%97%E7%AC%AC3%E5%90%8D%22%7D&rank=&style_id=40132&topic_id=7682189960509804038" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">18</span>
-            <span class="trending-title">张雪机车法国站次回合获得第3名</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682648887878156342/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%220%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682648887878156342%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%BC%A0%E9%9B%AA%E8%AF%A2%E9%97%AE%E6%96%B0%E7%96%86%E7%90%86%E5%8F%91%E5%BA%97%E5%87%A0%E7%82%B9%E8%90%A5%E4%B8%9A%22%7D&rank=&style_id=40132&topic_id=7682648887878156342" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">19</span>
-            <span class="trending-title">张雪询问新疆理发店几点营业</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682266631863681087/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%224%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682266631863681087%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E9%83%AD%E5%AF%8C%E5%9F%8E%E9%A6%96%E6%BC%94%E6%96%B0%E6%AD%8C%E3%80%8A%E5%86%B2%E5%86%B2%E5%86%B2%E3%80%8B%22%7D&rank=&style_id=40132&topic_id=7682266631863681087" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">20</span>
-            <span class="trending-title">郭富城首演新歌《冲冲冲》</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7681940225756597803/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227681940225756597803%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E7%89%B9%E6%96%AF%E6%8B%89Model+3%2FY%E9%99%8D%E4%BB%B7%22%7D&rank=&style_id=40132&topic_id=7681940225756597803" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">21</span>
-            <span class="trending-title">特斯拉Model 3/Y降价</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682279563775033394/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682279563775033394%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%8D%8E%E4%B8%BA%E6%96%B0%E6%AC%BE%E6%8A%98%E5%8F%A0%E5%B1%8F%E6%89%8B%E6%9C%BA%E5%8F%91%E5%B8%83%22%7D&rank=&style_id=40132&topic_id=7682279563775033394" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">22</span>
-            <span class="trending-title">华为新款折叠屏手机发布</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682640166615269898/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%228%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682640166615269898%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%A4%96%E5%AA%92%EF%BC%9A%E7%89%B9%E6%9C%97%E6%99%AE%E6%9A%97%E7%A4%BA%E5%B0%86%E6%96%B0%E5%A2%A8%E8%A5%BF%E5%93%A5%E5%B7%9E%E6%9B%B4%E5%90%8D%22%7D&rank=&style_id=40132&topic_id=7682640166615269898" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">23</span>
-            <span class="trending-title">外媒：特朗普暗示将新墨西哥州更名</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682257618565595162/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%221%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682257618565595162%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E8%B4%A2%E6%94%BF%E9%83%A8570%E4%BA%BF%E5%A2%9E%E8%B5%84%E4%B8%89%E5%AE%B6%E4%BF%9D%E9%99%A9%E5%85%AC%E5%8F%B8%22%7D&rank=&style_id=40132&topic_id=7682257618565595162" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">24</span>
-            <span class="trending-title">财政部570亿增资三家保险公司</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682587839762009619/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%225%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682587839762009619%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E8%B4%B5%E5%B7%9E3%E5%90%8D%E5%A4%B1%E8%81%94%E5%A5%B3%E5%AD%A9%E9%83%BD%E5%B7%B2%E6%89%BE%E5%88%B0%22%7D&rank=&style_id=40132&topic_id=7682587839762009619" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">25</span>
-            <span class="trending-title">贵州3名失联女孩都已找到</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682504526734196787/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%226%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682504526734196787%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E7%89%B9%E6%9C%97%E6%99%AE%E5%8F%91%E5%B8%83%E5%A4%AA%E7%A9%BA%E9%83%A8%E9%98%9F%E6%96%B0%E5%88%B6%E6%9C%8D%E8%A2%AB%E6%89%B9%E5%83%8F%E7%BA%B3%E7%B2%B9%22%7D&rank=&style_id=40132&topic_id=7682504526734196787" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">26</span>
-            <span class="trending-title">特朗普发布太空部队新制服被批像纳粹</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7681512009097347098/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%224%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227681512009097347098%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E6%94%B6%E8%B4%B9%E5%91%98%E5%90%AC%E5%88%B0%E2%80%9C%E5%8D%96%E8%A5%BF%E7%93%9C%E2%80%9D%E7%A7%92%E6%8F%90%E9%86%92%E5%8F%AF%E8%B5%B0%E7%BB%BF%E9%80%9A%22%7D&rank=&style_id=40132&topic_id=7681512009097347098" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">27</span>
-            <span class="trending-title">收费员听到“卖西瓜”秒提醒可走绿通</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682558659959721510/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%222%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682558659959721510%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E2%80%9C%E8%91%AB%E8%8A%A6%E5%A8%83%E7%88%B7%E7%88%B7%E2%80%9D%E9%9A%94%E5%A3%81%E9%98%B3%E5%8F%B0%E6%8C%82%E8%B5%B77%E4%B8%AA%E8%91%AB%E8%8A%A6%22%7D&rank=&style_id=40132&topic_id=7682558659959721510" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">28</span>
-            <span class="trending-title">“葫芦娃爷爷”隔壁阳台挂起7个葫芦</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682012963851894838/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%221%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682012963851894838%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E5%AD%98%E9%87%8F%E6%88%BF%E8%B4%B7%E5%87%8F%E8%B4%9F%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB+%E4%BD%A0%E8%83%BD%E4%B8%AD%E5%87%A0%E6%9D%A1%22%7D&rank=&style_id=40132&topic_id=7682012963851894838" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">29</span>
-            <span class="trending-title">存量房贷减负方法汇总 你能中几条</span>
-          </a>
-          
-          <a href="https://www.toutiao.com/trending/7682584874603298857/?category_name=topic_innerflow&event_type=hot_board&log_pb=%7B%22category_name%22%3A%22topic_innerflow%22%2C%22cluster_type%22%3A%226%22%2C%22enter_from%22%3A%22click_category%22%2C%22entrance_hotspot%22%3A%22outside%22%2C%22event_type%22%3A%22hot_board%22%2C%22hot_board_cluster_id%22%3A%227682584874603298857%22%2C%22hot_board_impr_id%22%3A%222026090716284415F8AC14B4427372FB3B%22%2C%22jump_page%22%3A%22hot_board_page%22%2C%22location%22%3A%22news_hot_card%22%2C%22page_location%22%3A%22hot_board_page%22%2C%22source%22%3A%22trending_tab%22%2C%22style_id%22%3A%2240132%22%2C%22title%22%3A%22%E6%B2%B3%E5%8C%97%E8%BF%99%E5%8F%AA%E8%80%81%E8%99%8E%E4%B8%8D%E5%92%AC%E4%BA%BA%E4%B8%93%E5%93%84%E7%9D%A1%E8%A7%89%22%7D&rank=&style_id=40132&topic_id=7682584874603298857" target="_blank" rel="noopener noreferrer" class="trending-item">
-            <span class="rank ">30</span>
-            <span class="trending-title">河北这只老虎不咬人专哄睡觉</span>
-          </a>
-          
-        </div>
-      </div>
-      
+            <div class="trend-main">
+              <a class="keyword" href="https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8100%E5%BC%A0" target="_blank" rel="noopener noreferrer">拼豆图纸100张</a>
+              <div class="meta">
+                <span>百度联想</span>
+                <span>发现于 09/07 17:31</span>
+                <span>信号分 10</span>
+              </div>
+            </div>
+            <span class="trend-badge new">新上榜</span>
+          </li></ol>
+      </section>
     </div>
+
+    <footer class="foot">
+      <div class="sources"><span class="source down"><i></i>抖音热榜</span><span class="source ok"><i></i>百度热搜</span><span class="source ok"><i></i>Bilibili 热门</span><span class="source ok"><i></i>百度联想</span></div>
+      <span>点击关键词查看公开搜索结果，不提供文件下载</span>
+    </footer>
   </main>
-  
-  <footer class="footer">
-    <p>数据来源: RSSHub, trends24.in, top-hashtags.com 等公开数据源</p>
-    <p>Powered by <a href="https://github.com" target="_blank">GitHub Actions</a> | 开源项目</p>
-  </footer>
-  
+
   <script>
-    // Tab 切换
-    document.querySelectorAll('.tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        
-        const platform = tab.dataset.platform;
-        document.querySelectorAll('.platform-card').forEach(card => {
-          if (platform === 'all' || card.dataset.platform === platform) {
-            card.classList.remove('hidden');
-          } else {
-            card.classList.add('hidden');
-          }
+    document.querySelectorAll('.filter').forEach((button) => {
+      button.addEventListener('click', () => {
+        const selected = button.dataset.category;
+        document.querySelectorAll('.filter').forEach((item) => {
+          const active = item === button;
+          item.classList.toggle('active', active);
+          item.setAttribute('aria-pressed', String(active));
+        });
+        document.querySelectorAll('.category-card').forEach((card) => {
+          card.classList.toggle('hidden', selected !== 'all' && card.dataset.category !== selected);
         });
       });
     });
-    
-    // 自动刷新页面 (30分钟)
-    setTimeout(() => {
-      location.reload();
-    }, 30 * 60 * 1000);
   </script>
 </body>
 </html>

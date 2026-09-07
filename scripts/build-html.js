@@ -60,8 +60,8 @@ function renderItem(item) {
               <div class="meta">
                 <span>${escapeHtml(sources.join(' · ') || '公开信号')}</span>
                 <span>发现于 ${escapeHtml(formatDate(item.firstSeenAt))}</span>
-                <span>信号分 ${escapeHtml(item.score)}</span>
-                ${staleLabel}
+                <span>信号分 ${escapeHtml(item.score)}</span>${staleLabel ? `
+                ${staleLabel}` : ''}
               </div>
             </div>
             <span class="trend-badge ${trend.className}">${escapeHtml(trend.label)}</span>
@@ -85,8 +85,8 @@ function renderCategory(key, category) {
             <p>${escapeHtml(details.description)}</p>
           </div>
           <span class="count">${items.length} 个词</span>
-        </div>
-        ${hasStale ? '<div class="stale-notice">当前来源暂不可用，以下内容沿用最近一次成功结果。</div>' : ''}
+        </div>${hasStale ? `
+        <div class="stale-notice">当前来源暂不可用，以下内容沿用最近一次成功结果。</div>` : ''}
         ${items.length > 0
           ? `<ol class="trend-list">${items.map(renderItem).join('')}</ol>`
           : '<div class="empty"><strong>本轮暂无符合条件的词</strong><span>系统只保留真实出现的下载或拼豆搜索表达。</span></div>'}

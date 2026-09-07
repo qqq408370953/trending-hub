@@ -57,6 +57,7 @@ test('renders only the focused trend dashboard and its signal labels', () => {
   assert.match(html, /库洛米拼豆图纸/);
   assert.match(html, /百度联想 · 抖音热榜/);
   assert.doesNotMatch(html, /platform-card/);
+  assert.doesNotMatch(html, /^[ \t]+$/m);
 });
 
 test('escapes keyword content and replaces dangerous links with search links', () => {

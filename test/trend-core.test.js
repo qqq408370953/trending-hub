@@ -6,7 +6,8 @@ import {
   classifyKeyword,
   safeSearchUrl,
   buildRankedItems,
-  withStaleFallback
+  withStaleFallback,
+  isSuggestionRelevantToTopic
 } from '../scripts/trend-core.js';
 
 test('classifies only the two requested keyword families', () => {
@@ -20,6 +21,22 @@ test('download terms require relevant context and reject unsafe resource intent'
   assert.equal(classifyKeyword('某游戏破解下载', { seedKind: 'downloads' }), null);
   assert.equal(classifyKeyword('某软件网盘下载', { seedKind: 'downloads' }), null);
   assert.equal(classifyKeyword('剪辑软件安装教程', { seedKind: 'downloads' }), 'downloads');
+  assert.equal(classifyKeyword('游戏下载', { seedKind: 'downloads' }), null);
+  assert.equal(classifyKeyword('软件下载平台', { seedKind: 'downloads' }), null);
+  assert.equal(classifyKeyword('游戏下载网站', { seedKind: 'downloads' }), null);
+  assert.equal(classifyKeyword('App 下载豆包软件', { seedKind: 'downloads' }), 'downloads');
+});
+
+test('requires a specific subject instead of a generic perler phrase', () => {
+  assert.equal(classifyKeyword('热门拼豆图纸', { seedKind: 'perler' }), null);
+  assert.equal(classifyKeyword('角色拼豆图纸大全', { seedKind: 'perler' }), null);
+  assert.equal(classifyKeyword('库洛米拼豆图纸', { seedKind: 'perler' }), 'perler');
+});
+
+test('requires hot-list expansions to retain a meaningful topic fragment', () => {
+  assert.equal(isSuggestionRelevantToTopic('华为三折叠新品发布', '华为三折叠拼豆教程'), true);
+  assert.equal(isSuggestionRelevantToTopic('鸣鸣很忙配送上线', '鸣鸣很忙配送 App 下载'), true);
+  assert.equal(isSuggestionRelevantToTopic('某明星演唱会官宣', '2025年最火拼豆图纸'), false);
 });
 
 test('normalizes whitespace without changing the user keyword', () => {
@@ -69,7 +86,7 @@ test('merges duplicate signals and calculates growth from the previous score', (
 
 test('marks unseen terms new and returns only the requested limit', () => {
   const signals = Array.from({ length: 35 }, (_, index) => ({
-    title: `工具${index}下载教程`,
+    title: `产品${index}下载教程`,
     source: '百度联想',
     suggestionRank: index + 1,
     seedKind: 'downloads'

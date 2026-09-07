@@ -6,6 +6,7 @@ import {
   parseBilibiliRanking,
   parseDouyinHot,
   parseBaiduSuggestions,
+  decodeBaiduBody,
   mapLimit
 } from '../scripts/trend-sources.js';
 
@@ -69,6 +70,18 @@ test('parses Baidu JSONP suggestions and rejects malformed bodies', () => {
     ['库洛米拼豆图纸', '星露谷拼豆']
   );
   assert.deepEqual(parseBaiduSuggestions('<html>blocked</html>'), []);
+});
+
+test('parses the unquoted-key JSONP shape returned by Baidu', () => {
+  assert.deepEqual(
+    parseBaiduSuggestions('window.baidu.sug({q:"拼豆图纸",p:false,s:["库洛米拼豆图纸","星露谷拼豆"]});'),
+    ['库洛米拼豆图纸', '星露谷拼豆']
+  );
+});
+
+test('decodes Baidu suggestion bytes as GBK', () => {
+  const bytes = Uint8Array.from([0xc6, 0xb4, 0xb6, 0xb9, 0xcd, 0xbc, 0xd6, 0xbd]);
+  assert.equal(decodeBaiduBody(bytes.buffer), '拼豆图纸');
 });
 
 test('mapLimit preserves result order and enforces the concurrency limit', async () => {

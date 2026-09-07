@@ -85,3 +85,24 @@ test('keeps the prior category as stale when no current signal survives', () => 
   ]);
   assert.deepEqual(snapshot.categories.downloads.items, []);
 });
+
+test('drops unrelated expansion fallbacks and keywords carrying an older year', () => {
+  const snapshot = createTrendingSnapshot({
+    previous: { categories: {} },
+    topics: [],
+    suggestionResults: [{
+      query: '某明星演唱会官宣 拼豆图纸',
+      topicTitle: '某明星演唱会官宣',
+      seedKind: 'perler',
+      source: '百度联想 · 百度热搜',
+      suggestions: ['2025年最火拼豆图纸', '某明星演唱会拼豆图纸']
+    }],
+    sourceStatus: [],
+    now: '2026-09-07T00:00:00.000Z'
+  });
+
+  assert.deepEqual(
+    snapshot.categories.perler.items.map((item) => item.title),
+    ['某明星演唱会拼豆图纸']
+  );
+});

@@ -59,8 +59,44 @@ export function parseBaiduSuggestions(body) {
     if (!Array.isArray(payload?.s)) return [];
     return [...new Set(payload.s.map(normalizeTitle).filter(Boolean))];
   } catch {
+    const inner = body.slice(start + 1, end);
+    const arrayMarker = /\bs\s*:\s*\[/.exec(inner);
+    if (!arrayMarker) return [];
+    const arrayStart = arrayMarker.index + arrayMarker[0].lastIndexOf('[');
+    let inString = false;
+    let escaped = false;
+    let depth = 0;
+
+    for (let index = arrayStart; index < inner.length; index += 1) {
+      const character = inner[index];
+      if (inString) {
+        if (escaped) escaped = false;
+        else if (character === '\\') escaped = true;
+        else if (character === '"') inString = false;
+        continue;
+      }
+      if (character === '"') inString = true;
+      else if (character === '[') depth += 1;
+      else if (character === ']') {
+        depth -= 1;
+        if (depth === 0) {
+          try {
+            const suggestions = JSON.parse(inner.slice(arrayStart, index + 1));
+            return Array.isArray(suggestions)
+              ? [...new Set(suggestions.map(normalizeTitle).filter(Boolean))]
+              : [];
+          } catch {
+            return [];
+          }
+        }
+      }
+    }
     return [];
   }
+}
+
+export function decodeBaiduBody(arrayBuffer) {
+  return new TextDecoder('gbk').decode(arrayBuffer);
 }
 
 export async function mapLimit(values, limit, worker) {

@@ -1,7 +1,7 @@
 {
   "name": "trending-hub",
   "version": "1.0.0",
-  "description": "Multi-platform trending topics aggregator for X, TikTok, Bilibili, YouTube, Instagram",
+  "description": "Focused Chinese keyword radar for download and perler-pattern trend signals",
   "type": "module",
   "scripts": {
     "test": "node --test",
@@ -19,11 +19,11 @@
   },
   "keywords": [
     "trending",
-    "twitter",
-    "tiktok",
-    "bilibili",
-    "youtube",
-    "instagram"
+    "keywords",
+    "download",
+    "perler",
+    "douyin",
+    "baidu"
   ],
   "author": "",
   "license": "MIT"
