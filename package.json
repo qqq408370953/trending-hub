@@ -4,6 +4,7 @@
   "description": "Multi-platform trending topics aggregator for X, TikTok, Bilibili, YouTube, Instagram",
   "type": "module",
   "scripts": {
+    "test": "node --test",
     "fetch": "node scripts/fetch-trending.js",
     "build": "node scripts/build-html.js",
     "start": "npm run fetch && npm run build",
