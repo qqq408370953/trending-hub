@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-09T01:15:22.284Z",
+  "lastUpdated": "2026-09-09T06:02:38.126Z",
   "categories": {
     "downloads": {
       "name": "下载热点",
@@ -8,6 +8,149 @@
       "items": [
         {
           "rank": 1,
+          "title": "海底捞游戏下载",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%B5%B7%E5%BA%95%E6%8D%9E%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD",
+          "score": 220,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 2,
+          "title": "海底捞软件下载",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%B5%B7%E5%BA%95%E6%8D%9E%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD",
+          "score": 160,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 3,
+          "title": "海底捞APP下载入口",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%B5%B7%E5%BA%95%E6%8D%9EAPP%E4%B8%8B%E8%BD%BD%E5%85%A5%E5%8F%A3",
+          "score": 120,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 4,
+          "title": "脱口秀好像真的没人看了 下载教程视频",
+          "searchUrl": "https://www.baidu.com/s?wd=%E8%84%B1%E5%8F%A3%E7%A7%80%E5%A5%BD%E5%83%8F%E7%9C%9F%E7%9A%84%E6%B2%A1%E4%BA%BA%E7%9C%8B%E4%BA%86%20%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B%E8%A7%86%E9%A2%91",
+          "score": 117,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 5,
+          "title": "脱口秀好像真的没人看了 下载mp3",
+          "searchUrl": "https://www.baidu.com/s?wd=%E8%84%B1%E5%8F%A3%E7%A7%80%E5%A5%BD%E5%83%8F%E7%9C%9F%E7%9A%84%E6%B2%A1%E4%BA%BA%E7%9C%8B%E4%BA%86%20%E4%B8%8B%E8%BD%BDmp3",
+          "score": 117,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 6,
+          "title": "《早春晴朗》大结局 下载百度云",
+          "searchUrl": "https://www.baidu.com/s?wd=%E3%80%8A%E6%97%A9%E6%98%A5%E6%99%B4%E6%9C%97%E3%80%8B%E5%A4%A7%E7%BB%93%E5%B1%80%20%E4%B8%8B%E8%BD%BD%E7%99%BE%E5%BA%A6%E4%BA%91",
+          "score": 112,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 7,
+          "title": "《早春晴朗》大结局 下载教程视频",
+          "searchUrl": "https://www.baidu.com/s?wd=%E3%80%8A%E6%97%A9%E6%98%A5%E6%99%B4%E6%9C%97%E3%80%8B%E5%A4%A7%E7%BB%93%E5%B1%80%20%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B%E8%A7%86%E9%A2%91",
+          "score": 112,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 8,
+          "title": "泥石流App下载",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%B3%A5%E7%9F%B3%E6%B5%81App%E4%B8%8B%E8%BD%BD",
+          "score": 111,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 9,
+          "title": "脱口秀下载到本地",
+          "searchUrl": "https://www.baidu.com/s?wd=%E8%84%B1%E5%8F%A3%E7%A7%80%E4%B8%8B%E8%BD%BD%E5%88%B0%E6%9C%AC%E5%9C%B0",
+          "score": 107,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 10,
+          "title": "《早春晴朗》大结局 下载",
+          "searchUrl": "https://www.baidu.com/s?wd=%E3%80%8A%E6%97%A9%E6%98%A5%E6%99%B4%E6%9C%97%E3%80%8B%E5%A4%A7%E7%BB%93%E5%B1%80%20%E4%B8%8B%E8%BD%BD",
+          "score": 102,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 11,
+          "title": "《早春晴朗》大结局 下载教程",
+          "searchUrl": "https://www.baidu.com/s?wd=%E3%80%8A%E6%97%A9%E6%98%A5%E6%99%B4%E6%9C%97%E3%80%8B%E5%A4%A7%E7%BB%93%E5%B1%80%20%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
+          "score": 102,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 12,
           "title": "怎么下载我的世界",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%80%8E%E4%B9%88%E4%B8%8B%E8%BD%BD%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C",
           "score": 100,
@@ -20,7 +163,72 @@
           "stale": false
         },
         {
-          "rank": 2,
+          "rank": 13,
+          "title": "脱口秀视频集锦下载免费",
+          "searchUrl": "https://www.baidu.com/s?wd=%E8%84%B1%E5%8F%A3%E7%A7%80%E8%A7%86%E9%A2%91%E9%9B%86%E9%94%A6%E4%B8%8B%E8%BD%BD%E5%85%8D%E8%B4%B9",
+          "score": 97,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 14,
+          "title": "《早春晴朗》大结局 下载观看",
+          "searchUrl": "https://www.baidu.com/s?wd=%E3%80%8A%E6%97%A9%E6%98%A5%E6%99%B4%E6%9C%97%E3%80%8B%E5%A4%A7%E7%BB%93%E5%B1%80%20%E4%B8%8B%E8%BD%BD%E8%A7%82%E7%9C%8B",
+          "score": 92,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 15,
+          "title": "《早春晴朗》大结局 下载教程图片",
+          "searchUrl": "https://www.baidu.com/s?wd=%E3%80%8A%E6%97%A9%E6%98%A5%E6%99%B4%E6%9C%97%E3%80%8B%E5%A4%A7%E7%BB%93%E5%B1%80%20%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%87",
+          "score": 92,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 16,
+          "title": "脱口秀全集全集免费播放下载",
+          "searchUrl": "https://www.baidu.com/s?wd=%E8%84%B1%E5%8F%A3%E7%A7%80%E5%85%A8%E9%9B%86%E5%85%A8%E9%9B%86%E5%85%8D%E8%B4%B9%E6%92%AD%E6%94%BE%E4%B8%8B%E8%BD%BD",
+          "score": 87,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 17,
+          "title": "早春晴朗下载资源方法",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%97%A9%E6%98%A5%E6%99%B4%E6%9C%97%E4%B8%8B%E8%BD%BD%E8%B5%84%E6%BA%90%E6%96%B9%E6%B3%95",
+          "score": 82,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 18,
           "title": "下载教程地图软件",
           "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B%E5%9C%B0%E5%9B%BE%E8%BD%AF%E4%BB%B6",
           "score": 80,
@@ -33,20 +241,59 @@
           "stale": false
         },
         {
-          "rank": 3,
-          "title": "app下载免费下载微信",
-          "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD%E5%BE%AE%E4%BF%A1",
+          "rank": 19,
+          "title": "app下载萌驾",
+          "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E8%90%8C%E9%A9%BE",
           "score": 80,
-          "growth": 0,
-          "trend": "steady",
+          "growth": 14,
+          "trend": "rising",
           "source": [
             "百度联想"
           ],
-          "firstSeenAt": "2026-09-07T09:24:46.410Z",
+          "firstSeenAt": "2026-09-08T11:21:09.654Z",
           "stale": false
         },
         {
-          "rank": 4,
+          "rank": 20,
+          "title": "海底捞app官方下载入口",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%B5%B7%E5%BA%95%E6%8D%9Eapp%E5%AE%98%E6%96%B9%E4%B8%8B%E8%BD%BD%E5%85%A5%E5%8F%A3",
+          "score": 80,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 21,
+          "title": "脱口秀TXT下载教程",
+          "searchUrl": "https://www.baidu.com/s?wd=%E8%84%B1%E5%8F%A3%E7%A7%80TXT%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
+          "score": 77,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 22,
+          "title": "早春晴朗免费下载链接",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%97%A9%E6%98%A5%E6%99%B4%E6%9C%97%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5",
+          "score": 72,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 23,
           "title": "下载教程:网页链接",
           "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B%3A%E7%BD%91%E9%A1%B5%E9%93%BE%E6%8E%A5",
           "score": 70,
@@ -59,20 +306,46 @@
           "stale": false
         },
         {
-          "rank": 5,
-          "title": "app下载萌驾",
-          "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E8%90%8C%E9%A9%BE",
+          "rank": 24,
+          "title": "app下载免费下载微信",
+          "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD%E5%BE%AE%E4%BF%A1",
           "score": 70,
-          "growth": 0,
-          "trend": "steady",
+          "growth": -12,
+          "trend": "falling",
           "source": [
             "百度联想"
           ],
-          "firstSeenAt": "2026-09-08T11:21:09.654Z",
+          "firstSeenAt": "2026-09-07T09:24:46.410Z",
           "stale": false
         },
         {
-          "rank": 6,
+          "rank": 25,
+          "title": "海底捞火锅下载",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%B5%B7%E5%BA%95%E6%8D%9E%E7%81%AB%E9%94%85%E4%B8%8B%E8%BD%BD",
+          "score": 70,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 26,
+          "title": "早春晴朗下载链接",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%97%A9%E6%98%A5%E6%99%B4%E6%9C%97%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5",
+          "score": 62,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 27,
           "title": "下载教程我的世界",
           "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C",
           "score": 60,
@@ -85,7 +358,7 @@
           "stale": false
         },
         {
-          "rank": 7,
+          "rank": 28,
           "title": "app下载安装最新版本",
           "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC",
           "score": 60,
@@ -98,172 +371,29 @@
           "stale": false
         },
         {
-          "rank": 8,
-          "title": "闪玩下载教程",
-          "searchUrl": "https://www.baidu.com/s?wd=%E9%97%AA%E7%8E%A9%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
-          "score": 50,
-          "growth": 0,
-          "trend": "steady",
+          "rank": 29,
+          "title": "脱口秀音频下载",
+          "searchUrl": "https://www.baidu.com/s?wd=%E8%84%B1%E5%8F%A3%E7%A7%80%E9%9F%B3%E9%A2%91%E4%B8%8B%E8%BD%BD",
+          "score": 57,
+          "growth": null,
+          "trend": "new",
           "source": [
-            "百度联想"
+            "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-07T09:24:46.410Z",
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
           "stale": false
         },
         {
-          "rank": 9,
-          "title": "app下载智慧中小学",
-          "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E6%99%BA%E6%85%A7%E4%B8%AD%E5%B0%8F%E5%AD%A6",
-          "score": 50,
-          "growth": 0,
-          "trend": "steady",
+          "rank": 30,
+          "title": "早春晴朗原著完整版下载",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%97%A9%E6%98%A5%E6%99%B4%E6%9C%97%E5%8E%9F%E8%91%97%E5%AE%8C%E6%95%B4%E7%89%88%E4%B8%8B%E8%BD%BD",
+          "score": 52,
+          "growth": null,
+          "trend": "new",
           "source": [
-            "百度联想"
+            "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-07T15:51:58.250Z",
-          "stale": false
-        },
-        {
-          "rank": 10,
-          "title": "嘿嘿连载漫画下载教程",
-          "searchUrl": "https://www.baidu.com/s?wd=%E5%98%BF%E5%98%BF%E8%BF%9E%E8%BD%BD%E6%BC%AB%E7%94%BB%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
-          "score": 40,
-          "growth": 0,
-          "trend": "steady",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-07T09:29:07.762Z",
-          "stale": false
-        },
-        {
-          "rank": 11,
-          "title": "软件下载vivo4.40每天无限免费大全",
-          "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BDvivo4.40%E6%AF%8F%E5%A4%A9%E6%97%A0%E9%99%90%E5%85%8D%E8%B4%B9%E5%A4%A7%E5%85%A8",
-          "score": 40,
-          "growth": 0,
-          "trend": "steady",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-07T09:24:46.410Z",
-          "stale": false
-        },
-        {
-          "rank": 12,
-          "title": "蜜友派闪聊app下载教程",
-          "searchUrl": "https://www.baidu.com/s?wd=%E8%9C%9C%E5%8F%8B%E6%B4%BE%E9%97%AA%E8%81%8Aapp%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
-          "score": 30,
-          "growth": 0,
-          "trend": "steady",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-08T11:21:09.654Z",
-          "stale": false
-        },
-        {
-          "rank": 13,
-          "title": "软件下载4.0.3免费oppo安装",
-          "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD4.0.3%E5%85%8D%E8%B4%B9oppo%E5%AE%89%E8%A3%85",
-          "score": 30,
-          "growth": 0,
-          "trend": "steady",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-07T09:24:46.410Z",
-          "stale": false
-        },
-        {
-          "rank": 14,
-          "title": "app下载豆包软件",
-          "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E8%B1%86%E5%8C%85%E8%BD%AF%E4%BB%B6",
-          "score": 30,
-          "growth": 0,
-          "trend": "steady",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-07T09:24:46.410Z",
-          "stale": false
-        },
-        {
-          "rank": 15,
-          "title": "软件下载4.0.3免费vivo",
-          "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD4.0.3%E5%85%8D%E8%B4%B9vivo",
-          "score": 20,
-          "growth": 0,
-          "trend": "steady",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-08T11:21:09.654Z",
-          "stale": false
-        },
-        {
-          "rank": 16,
-          "title": "王者荣耀老版本单机版下载教程",
-          "searchUrl": "https://www.baidu.com/s?wd=%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E8%80%81%E7%89%88%E6%9C%AC%E5%8D%95%E6%9C%BA%E7%89%88%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
-          "score": 20,
-          "growth": 0,
-          "trend": "steady",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-07T15:51:58.250Z",
-          "stale": false
-        },
-        {
-          "rank": 17,
-          "title": "app下载安装到手机上怎么安装",
-          "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%88%B0%E6%89%8B%E6%9C%BA%E4%B8%8A%E6%80%8E%E4%B9%88%E5%AE%89%E8%A3%85",
-          "score": 20,
-          "growth": 0,
-          "trend": "steady",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-07T09:29:07.762Z",
-          "stale": false
-        },
-        {
-          "rank": 18,
-          "title": "软件下载4.0.3免费oppo版本大全下载",
-          "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD4.0.3%E5%85%8D%E8%B4%B9oppo%E7%89%88%E6%9C%AC%E5%A4%A7%E5%85%A8%E4%B8%8B%E8%BD%BD",
-          "score": 10,
-          "growth": 0,
-          "trend": "steady",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-08T11:21:09.654Z",
-          "stale": false
-        },
-        {
-          "rank": 19,
-          "title": "游戏下载平台有哪些",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD%E5%B9%B3%E5%8F%B0%E6%9C%89%E5%93%AA%E4%BA%9B",
-          "score": 10,
-          "growth": -50,
-          "trend": "falling",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-07T09:29:07.762Z",
-          "stale": false
-        },
-        {
-          "rank": 20,
-          "title": "CarXstreet安卓下载教程",
-          "searchUrl": "https://www.baidu.com/s?wd=CarXstreet%E5%AE%89%E5%8D%93%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
-          "score": 10,
-          "growth": 0,
-          "trend": "steady",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-07T09:31:38.331Z",
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
           "stale": false
         }
       ]
@@ -275,71 +405,84 @@
       "items": [
         {
           "rank": 1,
-          "title": "拼豆拼河南",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E6%8B%BC%E6%B2%B3%E5%8D%97",
+          "title": "海底捞暴跌 拼豆图纸是真的吗",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%B5%B7%E5%BA%95%E6%8D%9E%E6%9A%B4%E8%B7%8C%20%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E6%98%AF%E7%9C%9F%E7%9A%84%E5%90%97",
           "score": 120,
           "growth": null,
           "trend": "new",
           "source": [
             "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-09T01:15:22.284Z",
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
           "stale": false
         },
         {
           "rank": 2,
-          "title": "高考拼豆100张完整版",
-          "searchUrl": "https://www.baidu.com/s?wd=%E9%AB%98%E8%80%83%E6%8B%BC%E8%B1%86100%E5%BC%A0%E5%AE%8C%E6%95%B4%E7%89%88",
+          "title": "一家三口拼豆图纸最新版下载方法",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%80%E5%AE%B6%E4%B8%89%E5%8F%A3%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E6%9C%80%E6%96%B0%E7%89%88%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95",
+          "score": 118,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 3,
+          "title": "脱口秀好像真的没人看了 拼豆图纸啊",
+          "searchUrl": "https://www.baidu.com/s?wd=%E8%84%B1%E5%8F%A3%E7%A7%80%E5%A5%BD%E5%83%8F%E7%9C%9F%E7%9A%84%E6%B2%A1%E4%BA%BA%E7%9C%8B%E4%BA%86%20%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%95%8A",
           "score": 117,
           "growth": null,
           "trend": "new",
           "source": [
             "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-09T01:15:22.284Z",
-          "stale": false
-        },
-        {
-          "rank": 3,
-          "title": "金球奖拼豆图纸小型",
-          "searchUrl": "https://www.baidu.com/s?wd=%E9%87%91%E7%90%83%E5%A5%96%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%B0%8F%E5%9E%8B",
-          "score": 115,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-09T01:15:22.284Z",
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
           "stale": false
         },
         {
           "rank": 4,
-          "title": "拼豆山东厂家电话",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%B1%B1%E4%B8%9C%E5%8E%82%E5%AE%B6%E7%94%B5%E8%AF%9D",
-          "score": 110,
+          "title": "《早春晴朗》大结局 拼豆图纸在线观看",
+          "searchUrl": "https://www.baidu.com/s?wd=%E3%80%8A%E6%97%A9%E6%98%A5%E6%99%B4%E6%9C%97%E3%80%8B%E5%A4%A7%E7%BB%93%E5%B1%80%20%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B",
+          "score": 112,
           "growth": null,
           "trend": "new",
           "source": [
             "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-09T01:15:22.284Z",
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
           "stale": false
         },
         {
           "rank": 5,
-          "title": "山东拼豆图纸队",
-          "searchUrl": "https://www.baidu.com/s?wd=%E5%B1%B1%E4%B8%9C%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E9%98%9F",
-          "score": 100,
+          "title": "一家三口一家三口拼豆图纸幸福版",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%80%E5%AE%B6%E4%B8%89%E5%8F%A3%E4%B8%80%E5%AE%B6%E4%B8%89%E5%8F%A3%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%B9%B8%E7%A6%8F%E7%89%88",
+          "score": 108,
           "growth": null,
           "trend": "new",
           "source": [
             "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-09T01:15:22.284Z",
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
           "stale": false
         },
         {
           "rank": 6,
+          "title": "一家三口拼豆图案",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%80%E5%AE%B6%E4%B8%89%E5%8F%A3%E6%8B%BC%E8%B1%86%E5%9B%BE%E6%A1%88",
+          "score": 98,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 7,
           "title": "拼豆图纸生成器",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%94%9F%E6%88%90%E5%99%A8",
           "score": 80,
@@ -349,19 +492,6 @@
             "百度联想"
           ],
           "firstSeenAt": "2026-09-07T09:31:38.331Z",
-          "stale": false
-        },
-        {
-          "rank": 7,
-          "title": "拼豆河南队logo图片",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E6%B2%B3%E5%8D%97%E9%98%9Flogo%E5%9B%BE%E7%89%87",
-          "score": 80,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-09T01:15:22.284Z",
           "stale": false
         },
         {
@@ -379,6 +509,19 @@
         },
         {
           "rank": 9,
+          "title": "一家三口拼豆图怎么拼好看",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%80%E5%AE%B6%E4%B8%89%E5%8F%A3%E6%8B%BC%E8%B1%86%E5%9B%BE%E6%80%8E%E4%B9%88%E6%8B%BC%E5%A5%BD%E7%9C%8B",
+          "score": 68,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 10,
           "title": "拼豆图纸简单又好看",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%AE%80%E5%8D%95%E5%8F%88%E5%A5%BD%E7%9C%8B",
           "score": 60,
@@ -391,7 +534,7 @@
           "stale": false
         },
         {
-          "rank": 10,
+          "rank": 11,
           "title": "崩铁角色拼豆",
           "searchUrl": "https://www.baidu.com/s?wd=%E5%B4%A9%E9%93%81%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86",
           "score": 50,
@@ -404,11 +547,11 @@
           "stale": false
         },
         {
-          "rank": 11,
-          "title": "拼豆图纸人物",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E4%BA%BA%E7%89%A9",
+          "rank": 12,
+          "title": "拼豆图纸可爱",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%8F%AF%E7%88%B1",
           "score": 50,
-          "growth": 67,
+          "growth": 25,
           "trend": "rising",
           "source": [
             "百度联想"
@@ -417,7 +560,7 @@
           "stale": false
         },
         {
-          "rank": 12,
+          "rank": 13,
           "title": "我的世界游戏拼豆",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%B8%B8%E6%88%8F%E6%8B%BC%E8%B1%86",
           "score": 50,
@@ -427,19 +570,6 @@
             "百度联想"
           ],
           "firstSeenAt": "2026-09-08T16:39:28.093Z",
-          "stale": false
-        },
-        {
-          "rank": 13,
-          "title": "山东省拼豆图纸",
-          "searchUrl": "https://www.baidu.com/s?wd=%E5%B1%B1%E4%B8%9C%E7%9C%81%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8",
-          "score": 50,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-09T01:15:22.284Z",
           "stale": false
         },
         {
@@ -457,11 +587,11 @@
         },
         {
           "rank": 15,
-          "title": "拼豆图纸可爱",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%8F%AF%E7%88%B1",
+          "title": "拼豆图纸线条小狗",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%BA%BF%E6%9D%A1%E5%B0%8F%E7%8B%97",
           "score": 40,
-          "growth": 0,
-          "trend": "steady",
+          "growth": 33,
+          "trend": "rising",
           "source": [
             "百度联想"
           ],
@@ -483,8 +613,8 @@
         },
         {
           "rank": 17,
-          "title": "拼豆图纸线条小狗",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%BA%BF%E6%9D%A1%E5%B0%8F%E7%8B%97",
+          "title": "拼豆图纸人物",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E4%BA%BA%E7%89%A9",
           "score": 30,
           "growth": -40,
           "trend": "falling",
@@ -522,6 +652,19 @@
         },
         {
           "rank": 20,
+          "title": "一家三口拼豆图纸全家福",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%80%E5%AE%B6%E4%B8%89%E5%8F%A3%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%85%A8%E5%AE%B6%E7%A6%8F",
+          "score": 28,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-09T06:02:38.126Z",
+          "stale": false
+        },
+        {
+          "rank": 21,
           "title": "动漫角色拼豆",
           "searchUrl": "https://www.baidu.com/s?wd=%E5%8A%A8%E6%BC%AB%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86",
           "score": 20,
@@ -534,12 +677,12 @@
           "stale": false
         },
         {
-          "rank": 21,
+          "rank": 22,
           "title": "拼豆图纸小一点的萌的",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%B0%8F%E4%B8%80%E7%82%B9%E7%9A%84%E8%90%8C%E7%9A%84",
           "score": 20,
-          "growth": 100,
-          "trend": "rising",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -547,7 +690,7 @@
           "stale": false
         },
         {
-          "rank": 22,
+          "rank": 23,
           "title": "角色拼豆APP图90色",
           "searchUrl": "https://www.baidu.com/s?wd=%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86APP%E5%9B%BE90%E8%89%B2",
           "score": 10,
@@ -560,12 +703,12 @@
           "stale": false
         },
         {
-          "rank": 23,
+          "rank": 24,
           "title": "拼豆图纸带色号大图",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%B8%A6%E8%89%B2%E5%8F%B7%E5%A4%A7%E5%9B%BE",
           "score": 10,
-          "growth": -50,
-          "trend": "falling",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -594,7 +737,7 @@
     {
       "name": "百度联想",
       "ok": true,
-      "count": 316
+      "count": 389
     }
   ]
 }
