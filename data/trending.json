@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-13T19:28:30.474Z",
+  "lastUpdated": "2026-09-13T22:25:23.192Z",
   "categories": {
     "downloads": {
       "name": "下载热点",
@@ -8,19 +8,6 @@
       "items": [
         {
           "rank": 1,
-          "title": "印尼游轮沉没中国游客漂流了吗视频播放下载",
-          "searchUrl": "https://www.baidu.com/s?wd=%E5%8D%B0%E5%B0%BC%E6%B8%B8%E8%BD%AE%E6%B2%89%E6%B2%A1%E4%B8%AD%E5%9B%BD%E6%B8%B8%E5%AE%A2%E6%BC%82%E6%B5%81%E4%BA%86%E5%90%97%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E4%B8%8B%E8%BD%BD",
-          "score": 158,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-13T19:28:30.474Z",
-          "stale": false
-        },
-        {
-          "rank": 2,
           "title": "怎么下载我的世界",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%80%8E%E4%B9%88%E4%B8%8B%E8%BD%BD%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C",
           "score": 100,
@@ -33,7 +20,7 @@
           "stale": false
         },
         {
-          "rank": 3,
+          "rank": 2,
           "title": "如何下载豆包?",
           "searchUrl": "https://www.baidu.com/s?wd=%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%E8%B1%86%E5%8C%85%3F",
           "score": 90,
@@ -46,7 +33,7 @@
           "stale": false
         },
         {
-          "rank": 4,
+          "rank": 3,
           "title": "下载教程地图软件",
           "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B%E5%9C%B0%E5%9B%BE%E8%BD%AF%E4%BB%B6",
           "score": 80,
@@ -59,20 +46,20 @@
           "stale": false
         },
         {
-          "rank": 5,
-          "title": "app下载免费下载微信",
-          "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD%E5%BE%AE%E4%BF%A1",
+          "rank": 4,
+          "title": "app下载萌驾",
+          "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E8%90%8C%E9%A9%BE",
           "score": 80,
-          "growth": 0,
-          "trend": "steady",
+          "growth": 14,
+          "trend": "rising",
           "source": [
             "百度联想"
           ],
-          "firstSeenAt": "2026-09-07T09:24:46.410Z",
+          "firstSeenAt": "2026-09-08T11:21:09.654Z",
           "stale": false
         },
         {
-          "rank": 6,
+          "rank": 5,
           "title": "下载教程:网页链接",
           "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B%3A%E7%BD%91%E9%A1%B5%E9%93%BE%E6%8E%A5",
           "score": 70,
@@ -85,20 +72,20 @@
           "stale": false
         },
         {
-          "rank": 7,
-          "title": "app下载萌驾",
-          "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E8%90%8C%E9%A9%BE",
+          "rank": 6,
+          "title": "app下载免费下载微信",
+          "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD%E5%BE%AE%E4%BF%A1",
           "score": 70,
-          "growth": 0,
-          "trend": "steady",
+          "growth": -12,
+          "trend": "falling",
           "source": [
             "百度联想"
           ],
-          "firstSeenAt": "2026-09-08T11:21:09.654Z",
+          "firstSeenAt": "2026-09-07T09:24:46.410Z",
           "stale": false
         },
         {
-          "rank": 8,
+          "rank": 7,
           "title": "下载教程我的世界",
           "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C",
           "score": 60,
@@ -111,7 +98,7 @@
           "stale": false
         },
         {
-          "rank": 9,
+          "rank": 8,
           "title": "闪玩下载教程",
           "searchUrl": "https://www.baidu.com/s?wd=%E9%97%AA%E7%8E%A9%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
           "score": 50,
@@ -124,12 +111,12 @@
           "stale": false
         },
         {
-          "rank": 10,
+          "rank": 9,
           "title": "软件下载4.0.3免费oppo安装",
           "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD4.0.3%E5%85%8D%E8%B4%B9oppo%E5%AE%89%E8%A3%85",
           "score": 40,
-          "growth": 33,
-          "trend": "rising",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -137,7 +124,7 @@
           "stale": false
         },
         {
-          "rank": 11,
+          "rank": 10,
           "title": "app下载豆包软件",
           "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E8%B1%86%E5%8C%85%E8%BD%AF%E4%BB%B6",
           "score": 40,
@@ -150,7 +137,7 @@
           "stale": false
         },
         {
-          "rank": 12,
+          "rank": 11,
           "title": "YouTube免费高清视频下载教程",
           "searchUrl": "https://www.baidu.com/s?wd=YouTube%E5%85%8D%E8%B4%B9%E9%AB%98%E6%B8%85%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
           "score": 40,
@@ -163,25 +150,12 @@
           "stale": false
         },
         {
-          "rank": 13,
-          "title": "阿瑞斯病毒2内置菜单版下载教程",
-          "searchUrl": "https://www.baidu.com/s?wd=%E9%98%BF%E7%91%9E%E6%96%AF%E7%97%85%E6%AF%922%E5%86%85%E7%BD%AE%E8%8F%9C%E5%8D%95%E7%89%88%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
-          "score": 30,
-          "growth": 0,
-          "trend": "steady",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-13T11:54:14.399Z",
-          "stale": false
-        },
-        {
-          "rank": 14,
+          "rank": 12,
           "title": "软件下载4.0.3免费oppo版本大全下载",
           "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD4.0.3%E5%85%8D%E8%B4%B9oppo%E7%89%88%E6%9C%AC%E5%A4%A7%E5%85%A8%E4%B8%8B%E8%BD%BD",
           "score": 30,
-          "growth": -25,
-          "trend": "falling",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -189,7 +163,7 @@
           "stale": false
         },
         {
-          "rank": 15,
+          "rank": 13,
           "title": "游戏下载单机",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD%E5%8D%95%E6%9C%BA",
           "score": 30,
@@ -202,7 +176,7 @@
           "stale": false
         },
         {
-          "rank": 16,
+          "rank": 14,
           "title": "app下载不了软件怎么办,苹果手机",
           "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E4%B8%8D%E4%BA%86%E8%BD%AF%E4%BB%B6%E6%80%8E%E4%B9%88%E5%8A%9E%2C%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA",
           "score": 30,
@@ -212,6 +186,32 @@
             "百度联想"
           ],
           "firstSeenAt": "2026-09-11T22:36:01.800Z",
+          "stale": false
+        },
+        {
+          "rank": 15,
+          "title": "XXPay钱包APP下载教程",
+          "searchUrl": "https://www.baidu.com/s?wd=XXPay%E9%92%B1%E5%8C%85APP%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
+          "score": 30,
+          "growth": 50,
+          "trend": "rising",
+          "source": [
+            "百度联想"
+          ],
+          "firstSeenAt": "2026-09-13T11:54:14.399Z",
+          "stale": false
+        },
+        {
+          "rank": 16,
+          "title": "阿瑞斯病毒2内置菜单版下载教程",
+          "searchUrl": "https://www.baidu.com/s?wd=%E9%98%BF%E7%91%9E%E6%96%AF%E7%97%85%E6%AF%922%E5%86%85%E7%BD%AE%E8%8F%9C%E5%8D%95%E7%89%88%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
+          "score": 20,
+          "growth": -33,
+          "trend": "falling",
+          "source": [
+            "百度联想"
+          ],
+          "firstSeenAt": "2026-09-13T11:54:14.399Z",
           "stale": false
         },
         {
@@ -242,19 +242,6 @@
         },
         {
           "rank": 19,
-          "title": "XXPay钱包APP下载教程",
-          "searchUrl": "https://www.baidu.com/s?wd=XXPay%E9%92%B1%E5%8C%85APP%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
-          "score": 20,
-          "growth": 0,
-          "trend": "steady",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-13T11:54:14.399Z",
-          "stale": false
-        },
-        {
-          "rank": 20,
           "title": "工商银行app下载",
           "searchUrl": "https://www.baidu.com/s?wd=%E5%B7%A5%E5%95%86%E9%93%B6%E8%A1%8Capp%E4%B8%8B%E8%BD%BD",
           "score": 10,
@@ -267,7 +254,7 @@
           "stale": false
         },
         {
-          "rank": 21,
+          "rank": 20,
           "title": "蜜友派闪聊app下载教程",
           "searchUrl": "https://www.baidu.com/s?wd=%E8%9C%9C%E5%8F%8B%E6%B4%BE%E9%97%AA%E8%81%8Aapp%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
           "score": 10,
@@ -280,25 +267,25 @@
           "stale": false
         },
         {
-          "rank": 22,
-          "title": "软件下载vivo4.40每天无限免费",
-          "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BDvivo4.40%E6%AF%8F%E5%A4%A9%E6%97%A0%E9%99%90%E5%85%8D%E8%B4%B9",
+          "rank": 21,
+          "title": "软件下载4.0.3免费vivo",
+          "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD4.0.3%E5%85%8D%E8%B4%B9vivo",
           "score": 10,
           "growth": null,
           "trend": "new",
           "source": [
             "百度联想"
           ],
-          "firstSeenAt": "2026-09-13T19:28:30.474Z",
+          "firstSeenAt": "2026-09-13T22:25:23.192Z",
           "stale": false
         },
         {
-          "rank": 23,
+          "rank": 22,
           "title": "游戏下载我的世界",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C",
           "score": 10,
-          "growth": null,
-          "trend": "new",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -329,9 +316,9 @@
           "rank": 2,
           "title": "拼豆图纸的明星牌",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%9A%84%E6%98%8E%E6%98%9F%E7%89%8C",
-          "score": 112,
-          "growth": 0,
-          "trend": "steady",
+          "score": 115,
+          "growth": 3,
+          "trend": "rising",
           "source": [
             "百度联想 · 百度热搜"
           ],
@@ -343,8 +330,8 @@
           "title": "拼豆比赛pk视频大全",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E6%AF%94%E8%B5%9Bpk%E8%A7%86%E9%A2%91%E5%A4%A7%E5%85%A8",
           "score": 110,
-          "growth": 83,
-          "trend": "rising",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想 · 百度热搜"
           ],
@@ -369,8 +356,8 @@
           "title": "拼豆比赛规则",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E6%AF%94%E8%B5%9B%E8%A7%84%E5%88%99",
           "score": 100,
-          "growth": 100,
-          "trend": "rising",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想 · 百度热搜"
           ],
@@ -408,8 +395,8 @@
           "title": "拼豆比赛PK",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E6%AF%94%E8%B5%9BPK",
           "score": 90,
-          "growth": 29,
-          "trend": "rising",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想 · 百度热搜"
           ],
@@ -447,8 +434,8 @@
           "title": "拼豆比赛PK图纸",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E6%AF%94%E8%B5%9BPK%E5%9B%BE%E7%BA%B8",
           "score": 80,
-          "growth": -27,
-          "trend": "falling",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想 · 百度热搜"
           ],
@@ -472,9 +459,9 @@
           "rank": 13,
           "title": "拼豆店面效果图",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%BA%97%E9%9D%A2%E6%95%88%E6%9E%9C%E5%9B%BE",
-          "score": 75,
-          "growth": null,
-          "trend": "new",
+          "score": 74,
+          "growth": -1,
+          "trend": "falling",
           "source": [
             "百度联想 · 百度热搜"
           ],
@@ -496,15 +483,15 @@
         },
         {
           "rank": 15,
-          "title": "苹果17拼豆图纸有色号大型",
-          "searchUrl": "https://www.baidu.com/s?wd=%E8%8B%B9%E6%9E%9C17%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E6%9C%89%E8%89%B2%E5%8F%B7%E5%A4%A7%E5%9E%8B",
+          "title": "帮我查一下子苹果17的拼豆图纸必须是立体版",
+          "searchUrl": "https://www.baidu.com/s?wd=%E5%B8%AE%E6%88%91%E6%9F%A5%E4%B8%80%E4%B8%8B%E5%AD%90%E8%8B%B9%E6%9E%9C17%E7%9A%84%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%BF%85%E9%A1%BB%E6%98%AF%E7%AB%8B%E4%BD%93%E7%89%88",
           "score": 66,
-          "growth": 18,
-          "trend": "rising",
+          "growth": null,
+          "trend": "new",
           "source": [
             "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-13T16:18:46.210Z",
+          "firstSeenAt": "2026-09-13T22:25:23.192Z",
           "stale": false
         },
         {
@@ -512,8 +499,8 @@
           "title": "比赛拼拼豆",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%AF%94%E8%B5%9B%E6%8B%BC%E6%8B%BC%E8%B1%86",
           "score": 60,
-          "growth": -40,
-          "trend": "falling",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想 · 百度热搜"
           ],
@@ -525,8 +512,8 @@
           "title": "苹果17Max的拼豆图纸",
           "searchUrl": "https://www.baidu.com/s?wd=%E8%8B%B9%E6%9E%9C17Max%E7%9A%84%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8",
           "score": 56,
-          "growth": 22,
-          "trend": "rising",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想 · 百度热搜"
           ],
@@ -577,8 +564,8 @@
           "title": "拼豆比赛视频大全",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E6%AF%94%E8%B5%9B%E8%A7%86%E9%A2%91%E5%A4%A7%E5%85%A8",
           "score": 50,
-          "growth": -44,
-          "trend": "falling",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想 · 百度热搜"
           ],
@@ -590,8 +577,8 @@
           "title": "拼豆苹果apple17 图纸",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E8%8B%B9%E6%9E%9Capple17%20%E5%9B%BE%E7%BA%B8",
           "score": 46,
-          "growth": 28,
-          "trend": "rising",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想 · 百度热搜"
           ],
@@ -629,8 +616,8 @@
           "title": "拼豆拼苹果17新款",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E6%8B%BC%E8%8B%B9%E6%9E%9C17%E6%96%B0%E6%AC%BE",
           "score": 36,
-          "growth": null,
-          "trend": "new",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想 · 百度热搜"
           ],
@@ -652,15 +639,15 @@
         },
         {
           "rank": 27,
-          "title": "拼豆图纸可爱",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%8F%AF%E7%88%B1",
+          "title": "拼豆图纸简单又好看",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%AE%80%E5%8D%95%E5%8F%88%E5%A5%BD%E7%9C%8B",
           "score": 30,
-          "growth": 50,
-          "trend": "rising",
+          "growth": null,
+          "trend": "new",
           "source": [
             "百度联想"
           ],
-          "firstSeenAt": "2026-09-13T16:18:46.210Z",
+          "firstSeenAt": "2026-09-13T22:25:23.192Z",
           "stale": false
         },
         {
@@ -693,9 +680,9 @@
           "rank": 30,
           "title": "拼豆店面装修效果图",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%BA%97%E9%9D%A2%E8%A3%85%E4%BF%AE%E6%95%88%E6%9E%9C%E5%9B%BE",
-          "score": 25,
-          "growth": null,
-          "trend": "new",
+          "score": 24,
+          "growth": -4,
+          "trend": "falling",
           "source": [
             "百度联想 · 百度热搜"
           ],
@@ -724,7 +711,7 @@
     {
       "name": "百度联想",
       "ok": true,
-      "count": 376
+      "count": 379
     }
   ]
 }
