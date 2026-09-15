@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-15T01:29:17.804Z",
+  "lastUpdated": "2026-09-15T07:46:12.708Z",
   "categories": {
     "downloads": {
       "name": "下载热点",
@@ -8,15 +8,15 @@
       "items": [
         {
           "rank": 1,
-          "title": "iphone终于支持调休闹钟了 下载什么软件",
-          "searchUrl": "https://www.baidu.com/s?wd=iphone%E7%BB%88%E4%BA%8E%E6%94%AF%E6%8C%81%E8%B0%83%E4%BC%91%E9%97%B9%E9%92%9F%E4%BA%86%20%E4%B8%8B%E8%BD%BD%E4%BB%80%E4%B9%88%E8%BD%AF%E4%BB%B6",
-          "score": 118,
+          "title": "手动挡车场下载",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%89%8B%E5%8A%A8%E6%8C%A1%E8%BD%A6%E5%9C%BA%E4%B8%8B%E8%BD%BD",
+          "score": 109,
           "growth": null,
           "trend": "new",
           "source": [
             "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
+          "firstSeenAt": "2026-09-15T07:46:12.708Z",
           "stale": false
         },
         {
@@ -34,6 +34,19 @@
         },
         {
           "rank": 3,
+          "title": "手动挡汽车驾驶下载",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%89%8B%E5%8A%A8%E6%8C%A1%E6%B1%BD%E8%BD%A6%E9%A9%BE%E9%A9%B6%E4%B8%8B%E8%BD%BD",
+          "score": 99,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-15T07:46:12.708Z",
+          "stale": false
+        },
+        {
+          "rank": 4,
           "title": "如何下载豆包?",
           "searchUrl": "https://www.baidu.com/s?wd=%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%E8%B1%86%E5%8C%85%3F",
           "score": 90,
@@ -46,7 +59,20 @@
           "stale": false
         },
         {
-          "rank": 4,
+          "rank": 5,
+          "title": "手动挡汽车游戏下载",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%89%8B%E5%8A%A8%E6%8C%A1%E6%B1%BD%E8%BD%A6%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD",
+          "score": 89,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-15T07:46:12.708Z",
+          "stale": false
+        },
+        {
+          "rank": 6,
           "title": "下载教程地图软件",
           "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B%E5%9C%B0%E5%9B%BE%E8%BD%AF%E4%BB%B6",
           "score": 80,
@@ -59,7 +85,7 @@
           "stale": false
         },
         {
-          "rank": 5,
+          "rank": 7,
           "title": "app下载小亿同学",
           "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E5%B0%8F%E4%BA%BF%E5%90%8C%E5%AD%A6",
           "score": 80,
@@ -72,7 +98,20 @@
           "stale": false
         },
         {
-          "rank": 6,
+          "rank": 8,
+          "title": "手动挡汽车模拟器下载手机版",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%89%8B%E5%8A%A8%E6%8C%A1%E6%B1%BD%E8%BD%A6%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%B8%8B%E8%BD%BD%E6%89%8B%E6%9C%BA%E7%89%88",
+          "score": 79,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-15T07:46:12.708Z",
+          "stale": false
+        },
+        {
+          "rank": 9,
           "title": "下载教程:网页链接",
           "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B%3A%E7%BD%91%E9%A1%B5%E9%93%BE%E6%8E%A5",
           "score": 70,
@@ -85,7 +124,7 @@
           "stale": false
         },
         {
-          "rank": 7,
+          "rank": 10,
           "title": "app下载萌驾",
           "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E8%90%8C%E9%A9%BE",
           "score": 70,
@@ -98,7 +137,7 @@
           "stale": false
         },
         {
-          "rank": 8,
+          "rank": 11,
           "title": "下载教程我的世界",
           "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C",
           "score": 60,
@@ -111,7 +150,20 @@
           "stale": false
         },
         {
-          "rank": 9,
+          "rank": 12,
+          "title": "软件下载记录怎么看",
+          "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E8%AE%B0%E5%BD%95%E6%80%8E%E4%B9%88%E7%9C%8B",
+          "score": 50,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想"
+          ],
+          "firstSeenAt": "2026-09-15T07:46:12.708Z",
+          "stale": false
+        },
+        {
+          "rank": 13,
           "title": "闪玩下载教程",
           "searchUrl": "https://www.baidu.com/s?wd=%E9%97%AA%E7%8E%A9%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
           "score": 50,
@@ -124,7 +176,7 @@
           "stale": false
         },
         {
-          "rank": 10,
+          "rank": 14,
           "title": "软件下载4.0.3免费oppo版本大全下载",
           "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD4.0.3%E5%85%8D%E8%B4%B9oppo%E7%89%88%E6%9C%AC%E5%A4%A7%E5%85%A8%E4%B8%8B%E8%BD%BD",
           "score": 40,
@@ -137,7 +189,7 @@
           "stale": false
         },
         {
-          "rank": 11,
+          "rank": 15,
           "title": "app下载不了软件怎么办,苹果手机",
           "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E4%B8%8D%E4%BA%86%E8%BD%AF%E4%BB%B6%E6%80%8E%E4%B9%88%E5%8A%9E%2C%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA",
           "score": 40,
@@ -150,20 +202,33 @@
           "stale": false
         },
         {
-          "rank": 12,
-          "title": "YouTube免费高清视频下载教程",
-          "searchUrl": "https://www.baidu.com/s?wd=YouTube%E5%85%8D%E8%B4%B9%E9%AB%98%E6%B8%85%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
+          "rank": 16,
+          "title": "XXPay钱包APP下载教程",
+          "searchUrl": "https://www.baidu.com/s?wd=XXPay%E9%92%B1%E5%8C%85APP%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
           "score": 40,
-          "growth": 0,
-          "trend": "steady",
+          "growth": 33,
+          "trend": "rising",
           "source": [
             "百度联想"
           ],
-          "firstSeenAt": "2026-09-14T19:22:43.829Z",
+          "firstSeenAt": "2026-09-13T11:54:14.399Z",
           "stale": false
         },
         {
-          "rank": 13,
+          "rank": 17,
+          "title": "阿瑞斯病毒2内置菜单版下载教程",
+          "searchUrl": "https://www.baidu.com/s?wd=%E9%98%BF%E7%91%9E%E6%96%AF%E7%97%85%E6%AF%922%E5%86%85%E7%BD%AE%E8%8F%9C%E5%8D%95%E7%89%88%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
+          "score": 30,
+          "growth": 200,
+          "trend": "rising",
+          "source": [
+            "百度联想"
+          ],
+          "firstSeenAt": "2026-09-13T11:54:14.399Z",
+          "stale": false
+        },
+        {
+          "rank": 18,
           "title": "工商银行app下载",
           "searchUrl": "https://www.baidu.com/s?wd=%E5%B7%A5%E5%95%86%E9%93%B6%E8%A1%8Capp%E4%B8%8B%E8%BD%BD",
           "score": 30,
@@ -176,7 +241,7 @@
           "stale": false
         },
         {
-          "rank": 14,
+          "rank": 19,
           "title": "软件下载4.0.3免费oppo安装",
           "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD4.0.3%E5%85%8D%E8%B4%B9oppo%E5%AE%89%E8%A3%85",
           "score": 30,
@@ -189,7 +254,7 @@
           "stale": false
         },
         {
-          "rank": 15,
+          "rank": 20,
           "title": "游戏下载入口",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD%E5%85%A5%E5%8F%A3",
           "score": 30,
@@ -202,20 +267,20 @@
           "stale": false
         },
         {
-          "rank": 16,
-          "title": "XXPay钱包APP下载教程",
-          "searchUrl": "https://www.baidu.com/s?wd=XXPay%E9%92%B1%E5%8C%85APP%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
-          "score": 30,
-          "growth": 0,
-          "trend": "steady",
+          "rank": 21,
+          "title": "手动挡车场2下载",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%89%8B%E5%8A%A8%E6%8C%A1%E8%BD%A6%E5%9C%BA2%E4%B8%8B%E8%BD%BD",
+          "score": 29,
+          "growth": null,
+          "trend": "new",
           "source": [
-            "百度联想"
+            "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-13T11:54:14.399Z",
+          "firstSeenAt": "2026-09-15T07:46:12.708Z",
           "stale": false
         },
         {
-          "rank": 17,
+          "rank": 22,
           "title": "个人所得税app下载",
           "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AA%E4%BA%BA%E6%89%80%E5%BE%97%E7%A8%8Eapp%E4%B8%8B%E8%BD%BD",
           "score": 20,
@@ -228,20 +293,7 @@
           "stale": false
         },
         {
-          "rank": 18,
-          "title": "蜜友派闪聊app下载教程",
-          "searchUrl": "https://www.baidu.com/s?wd=%E8%9C%9C%E5%8F%8B%E6%B4%BE%E9%97%AA%E8%81%8Aapp%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
-          "score": 20,
-          "growth": 0,
-          "trend": "steady",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-11T01:06:47.927Z",
-          "stale": false
-        },
-        {
-          "rank": 19,
+          "rank": 23,
           "title": "软件下载4.0.3免费vivo",
           "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD4.0.3%E5%85%8D%E8%B4%B9vivo",
           "score": 20,
@@ -254,7 +306,20 @@
           "stale": false
         },
         {
-          "rank": 20,
+          "rank": 24,
+          "title": "特推官方版下载教程",
+          "searchUrl": "https://www.baidu.com/s?wd=%E7%89%B9%E6%8E%A8%E5%AE%98%E6%96%B9%E7%89%88%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
+          "score": 20,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想"
+          ],
+          "firstSeenAt": "2026-09-15T07:46:12.708Z",
+          "stale": false
+        },
+        {
+          "rank": 25,
           "title": "游戏下载排行榜前十名手游",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD%E6%8E%92%E8%A1%8C%E6%A6%9C%E5%89%8D%E5%8D%81%E5%90%8D%E6%89%8B%E6%B8%B8",
           "score": 20,
@@ -267,20 +332,20 @@
           "stale": false
         },
         {
-          "rank": 21,
-          "title": "阿瑞斯病毒2内置菜单版下载教程",
-          "searchUrl": "https://www.baidu.com/s?wd=%E9%98%BF%E7%91%9E%E6%96%AF%E7%97%85%E6%AF%922%E5%86%85%E7%BD%AE%E8%8F%9C%E5%8D%95%E7%89%88%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
-          "score": 10,
-          "growth": 0,
-          "trend": "steady",
+          "rank": 26,
+          "title": "手动挡汽车驾驶游戏下载",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%89%8B%E5%8A%A8%E6%8C%A1%E6%B1%BD%E8%BD%A6%E9%A9%BE%E9%A9%B6%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD",
+          "score": 19,
+          "growth": null,
+          "trend": "new",
           "source": [
-            "百度联想"
+            "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-13T11:54:14.399Z",
+          "firstSeenAt": "2026-09-15T07:46:12.708Z",
           "stale": false
         },
         {
-          "rank": 22,
+          "rank": 27,
           "title": "河北人社app下载",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%B2%B3%E5%8C%97%E4%BA%BA%E7%A4%BEapp%E4%B8%8B%E8%BD%BD",
           "score": 10,
@@ -293,16 +358,16 @@
           "stale": false
         },
         {
-          "rank": 23,
-          "title": "软件下载4.0.3免费oppo版",
-          "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD4.0.3%E5%85%8D%E8%B4%B9oppo%E7%89%88",
+          "rank": 28,
+          "title": "YouTube免费高清视频下载教程",
+          "searchUrl": "https://www.baidu.com/s?wd=YouTube%E5%85%8D%E8%B4%B9%E9%AB%98%E6%B8%85%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
           "score": 10,
-          "growth": 0,
-          "trend": "steady",
+          "growth": -75,
+          "trend": "falling",
           "source": [
             "百度联想"
           ],
-          "firstSeenAt": "2026-09-14T23:08:35.777Z",
+          "firstSeenAt": "2026-09-14T19:22:43.829Z",
           "stale": false
         }
       ]
@@ -314,58 +379,19 @@
       "items": [
         {
           "rank": 1,
-          "title": "牛肉拼豆图纸简单画法",
-          "searchUrl": "https://www.baidu.com/s?wd=%E7%89%9B%E8%82%89%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%AE%80%E5%8D%95%E7%94%BB%E6%B3%95",
-          "score": 121,
+          "title": "拼豆创意作品欣赏",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%88%9B%E6%84%8F%E4%BD%9C%E5%93%81%E6%AC%A3%E8%B5%8F",
+          "score": 91,
           "growth": null,
           "trend": "new",
           "source": [
             "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
+          "firstSeenAt": "2026-09-15T07:46:12.708Z",
           "stale": false
         },
         {
           "rank": 2,
-          "title": "拼豆苹果闹钟",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E8%8B%B9%E6%9E%9C%E9%97%B9%E9%92%9F",
-          "score": 118,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
-          "stale": false
-        },
-        {
-          "rank": 3,
-          "title": "拼豆牛肉做法简单步骤",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E7%89%9B%E8%82%89%E5%81%9A%E6%B3%95%E7%AE%80%E5%8D%95%E6%AD%A5%E9%AA%A4",
-          "score": 111,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
-          "stale": false
-        },
-        {
-          "rank": 4,
-          "title": "简单的拼豆人物怎么拼",
-          "searchUrl": "https://www.baidu.com/s?wd=%E7%AE%80%E5%8D%95%E7%9A%84%E6%8B%BC%E8%B1%86%E4%BA%BA%E7%89%A9%E6%80%8E%E4%B9%88%E6%8B%BC",
-          "score": 100,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
-          "stale": false
-        },
-        {
-          "rank": 5,
           "title": "拼豆图纸生成器",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%94%9F%E6%88%90%E5%99%A8",
           "score": 90,
@@ -378,46 +404,20 @@
           "stale": false
         },
         {
-          "rank": 6,
-          "title": "拼人物拼豆图纸",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E4%BA%BA%E7%89%A9%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8",
-          "score": 90,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
-          "stale": false
-        },
-        {
-          "rank": 7,
-          "title": "拼豆简单图纸小闹钟",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E7%AE%80%E5%8D%95%E5%9B%BE%E7%BA%B8%E5%B0%8F%E9%97%B9%E9%92%9F",
-          "score": 88,
+          "rank": 3,
+          "title": "拼豆作品北京简单图片",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E4%BD%9C%E5%93%81%E5%8C%97%E4%BA%AC%E7%AE%80%E5%8D%95%E5%9B%BE%E7%89%87",
+          "score": 81,
           "growth": null,
           "trend": "new",
           "source": [
             "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
+          "firstSeenAt": "2026-09-15T07:46:12.708Z",
           "stale": false
         },
         {
-          "rank": 8,
-          "title": "姆巴佩的拼豆图纸",
-          "searchUrl": "https://www.baidu.com/s?wd=%E5%A7%86%E5%B7%B4%E4%BD%A9%E7%9A%84%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8",
-          "score": 83,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
-          "stale": false
-        },
-        {
-          "rank": 9,
+          "rank": 4,
           "title": "拼豆图纸可爱小图案",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%8F%AF%E7%88%B1%E5%B0%8F%E5%9B%BE%E6%A1%88",
           "score": 80,
@@ -430,46 +430,20 @@
           "stale": false
         },
         {
-          "rank": 10,
-          "title": "人物拼豆颜色编号大全",
-          "searchUrl": "https://www.baidu.com/s?wd=%E4%BA%BA%E7%89%A9%E6%8B%BC%E8%B1%86%E9%A2%9C%E8%89%B2%E7%BC%96%E5%8F%B7%E5%A4%A7%E5%85%A8",
-          "score": 80,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
-          "stale": false
-        },
-        {
-          "rank": 11,
-          "title": "拼豆苹果闹钟植物大战僵尸",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E8%8B%B9%E6%9E%9C%E9%97%B9%E9%92%9F%E6%A4%8D%E7%89%A9%E5%A4%A7%E6%88%98%E5%83%B5%E5%B0%B8",
-          "score": 68,
+          "rank": 5,
+          "title": "拼豆创意作品合集",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%88%9B%E6%84%8F%E4%BD%9C%E5%93%81%E5%90%88%E9%9B%86",
+          "score": 61,
           "growth": null,
           "trend": "new",
           "source": [
             "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
+          "firstSeenAt": "2026-09-15T07:46:12.708Z",
           "stale": false
         },
         {
-          "rank": 12,
-          "title": "姆巴佩拼豆球员小动作图",
-          "searchUrl": "https://www.baidu.com/s?wd=%E5%A7%86%E5%B7%B4%E4%BD%A9%E6%8B%BC%E8%B1%86%E7%90%83%E5%91%98%E5%B0%8F%E5%8A%A8%E4%BD%9C%E5%9B%BE",
-          "score": 63,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
-          "stale": false
-        },
-        {
-          "rank": 13,
+          "rank": 6,
           "title": "拼豆图纸高颜值好看",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E9%AB%98%E9%A2%9C%E5%80%BC%E5%A5%BD%E7%9C%8B",
           "score": 60,
@@ -482,46 +456,7 @@
           "stale": false
         },
         {
-          "rank": 14,
-          "title": "ch人物拼豆图纸",
-          "searchUrl": "https://www.baidu.com/s?wd=ch%E4%BA%BA%E7%89%A9%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8",
-          "score": 60,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
-          "stale": false
-        },
-        {
-          "rank": 15,
-          "title": "姆巴佩拼豆足球图集",
-          "searchUrl": "https://www.baidu.com/s?wd=%E5%A7%86%E5%B7%B4%E4%BD%A9%E6%8B%BC%E8%B1%86%E8%B6%B3%E7%90%83%E5%9B%BE%E9%9B%86",
-          "score": 53,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
-          "stale": false
-        },
-        {
-          "rank": 16,
-          "title": "用拼豆怎么拼牛肉",
-          "searchUrl": "https://www.baidu.com/s?wd=%E7%94%A8%E6%8B%BC%E8%B1%86%E6%80%8E%E4%B9%88%E6%8B%BC%E7%89%9B%E8%82%89",
-          "score": 51,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
-          "stale": false
-        },
-        {
-          "rank": 17,
+          "rank": 7,
           "title": "拼豆图纸小鼻嘎",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%B0%8F%E9%BC%BB%E5%98%8E",
           "score": 50,
@@ -534,20 +469,20 @@
           "stale": false
         },
         {
-          "rank": 18,
-          "title": "人物拼豆图纸带色号大图",
-          "searchUrl": "https://www.baidu.com/s?wd=%E4%BA%BA%E7%89%A9%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%B8%A6%E8%89%B2%E5%8F%B7%E5%A4%A7%E5%9B%BE",
+          "rank": 8,
+          "title": "三角洲角色拼豆",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86",
           "score": 50,
           "growth": null,
           "trend": "new",
           "source": [
             "百度联想"
           ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
+          "firstSeenAt": "2026-09-15T07:46:12.708Z",
           "stale": false
         },
         {
-          "rank": 19,
+          "rank": 9,
           "title": "游戏拼豆图纸贴画",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%B8%B8%E6%88%8F%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E8%B4%B4%E7%94%BB",
           "score": 50,
@@ -560,33 +495,7 @@
           "stale": false
         },
         {
-          "rank": 20,
-          "title": "姆巴佩拼豆图片超真实超帅",
-          "searchUrl": "https://www.baidu.com/s?wd=%E5%A7%86%E5%B7%B4%E4%BD%A9%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%89%87%E8%B6%85%E7%9C%9F%E5%AE%9E%E8%B6%85%E5%B8%85",
-          "score": 43,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
-          "stale": false
-        },
-        {
-          "rank": 21,
-          "title": "怎么用拼豆做牛肉",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%80%8E%E4%B9%88%E7%94%A8%E6%8B%BC%E8%B1%86%E5%81%9A%E7%89%9B%E8%82%89",
-          "score": 41,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
-          "stale": false
-        },
-        {
-          "rank": 22,
+          "rank": 10,
           "title": "拼豆图纸简单又好看",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%AE%80%E5%8D%95%E5%8F%88%E5%A5%BD%E7%9C%8B",
           "score": 40,
@@ -599,33 +508,46 @@
           "stale": false
         },
         {
-          "rank": 23,
-          "title": "人物拼豆带色号",
-          "searchUrl": "https://www.baidu.com/s?wd=%E4%BA%BA%E7%89%A9%E6%8B%BC%E8%B1%86%E5%B8%A6%E8%89%B2%E5%8F%B7",
+          "rank": 11,
+          "title": "奇喵君全部角色拼豆",
+          "searchUrl": "https://www.baidu.com/s?wd=%E5%A5%87%E5%96%B5%E5%90%9B%E5%85%A8%E9%83%A8%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86",
           "score": 40,
           "growth": null,
           "trend": "new",
           "source": [
             "百度联想"
           ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
+          "firstSeenAt": "2026-09-15T07:46:12.708Z",
           "stale": false
         },
         {
-          "rank": 24,
-          "title": "姆巴佩拼豆球衣设计图",
-          "searchUrl": "https://www.baidu.com/s?wd=%E5%A7%86%E5%B7%B4%E4%BD%A9%E6%8B%BC%E8%B1%86%E7%90%83%E8%A1%A3%E8%AE%BE%E8%AE%A1%E5%9B%BE",
-          "score": 33,
+          "rank": 12,
+          "title": "拼豆创意作品分享",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%88%9B%E6%84%8F%E4%BD%9C%E5%93%81%E5%88%86%E4%BA%AB",
+          "score": 31,
           "growth": null,
           "trend": "new",
           "source": [
             "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
+          "firstSeenAt": "2026-09-15T07:46:12.708Z",
           "stale": false
         },
         {
-          "rank": 25,
+          "rank": 13,
+          "title": "角色拼豆APP图90色",
+          "searchUrl": "https://www.baidu.com/s?wd=%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86APP%E5%9B%BE90%E8%89%B2",
+          "score": 30,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想"
+          ],
+          "firstSeenAt": "2026-09-15T07:46:12.708Z",
+          "stale": false
+        },
+        {
+          "rank": 14,
           "title": "拼豆图纸可爱",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%8F%AF%E7%88%B1",
           "score": 30,
@@ -638,7 +560,7 @@
           "stale": false
         },
         {
-          "rank": 26,
+          "rank": 15,
           "title": "游戏拼豆是什么意思啊",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%B8%B8%E6%88%8F%E6%8B%BC%E8%B1%86%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D%E5%95%8A",
           "score": 30,
@@ -651,38 +573,38 @@
           "stale": false
         },
         {
-          "rank": 27,
-          "title": "有没有人物拼豆的图纸",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%9C%89%E6%B2%A1%E6%9C%89%E4%BA%BA%E7%89%A9%E6%8B%BC%E8%B1%86%E7%9A%84%E5%9B%BE%E7%BA%B8",
-          "score": 30,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
-          "stale": false
-        },
-        {
-          "rank": 28,
-          "title": "姆巴佩拼豆世界杯图解",
-          "searchUrl": "https://www.baidu.com/s?wd=%E5%A7%86%E5%B7%B4%E4%BD%A9%E6%8B%BC%E8%B1%86%E4%B8%96%E7%95%8C%E6%9D%AF%E5%9B%BE%E8%A7%A3",
-          "score": 23,
+          "rank": 16,
+          "title": "拼豆展的作品照片",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%B1%95%E7%9A%84%E4%BD%9C%E5%93%81%E7%85%A7%E7%89%87",
+          "score": 21,
           "growth": null,
           "trend": "new",
           "source": [
             "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-15T01:29:17.804Z",
+          "firstSeenAt": "2026-09-15T07:46:12.708Z",
           "stale": false
         },
         {
-          "rank": 29,
-          "title": "拼豆图纸线条小狗",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%BA%BF%E6%9D%A1%E5%B0%8F%E7%8B%97",
+          "rank": 17,
+          "title": "拼豆图纸人物",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E4%BA%BA%E7%89%A9",
           "score": 20,
           "growth": 100,
           "trend": "rising",
+          "source": [
+            "百度联想"
+          ],
+          "firstSeenAt": "2026-09-14T23:08:35.777Z",
+          "stale": false
+        },
+        {
+          "rank": 18,
+          "title": "拼豆图纸线条小狗",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%BA%BF%E6%9D%A1%E5%B0%8F%E7%8B%97",
+          "score": 10,
+          "growth": -50,
+          "trend": "falling",
           "source": [
             "百度联想"
           ],
@@ -690,16 +612,16 @@
           "stale": false
         },
         {
-          "rank": 30,
-          "title": "拼豆图纸人物",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E4%BA%BA%E7%89%A9",
+          "rank": 19,
+          "title": "影视剧角色拼豆App下载",
+          "searchUrl": "https://www.baidu.com/s?wd=%E5%BD%B1%E8%A7%86%E5%89%A7%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86App%E4%B8%8B%E8%BD%BD",
           "score": 10,
-          "growth": -50,
-          "trend": "falling",
+          "growth": null,
+          "trend": "new",
           "source": [
             "百度联想"
           ],
-          "firstSeenAt": "2026-09-14T23:08:35.777Z",
+          "firstSeenAt": "2026-09-15T07:46:12.708Z",
           "stale": false
         }
       ]
@@ -724,7 +646,7 @@
     {
       "name": "百度联想",
       "ok": true,
-      "count": 376
+      "count": 372
     }
   ]
 }
