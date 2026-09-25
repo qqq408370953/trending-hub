@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-24T22:25:33.796Z",
+  "lastUpdated": "2026-09-25T01:31:44.591Z",
   "categories": {
     "downloads": {
       "name": "下载热点",
@@ -8,10 +8,36 @@
       "items": [
         {
           "rank": 1,
+          "title": "下载中秋图片大全",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E4%B8%AD%E7%A7%8B%E5%9B%BE%E7%89%87%E5%A4%A7%E5%85%A8",
+          "score": 115,
+          "growth": 0,
+          "trend": "steady",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-24T22:25:33.796Z",
+          "stale": false
+        },
+        {
+          "rank": 2,
+          "title": "王皓回应国乒男团不敌日本队丢冠 下载视频",
+          "searchUrl": "https://www.baidu.com/s?wd=%E7%8E%8B%E7%9A%93%E5%9B%9E%E5%BA%94%E5%9B%BD%E4%B9%92%E7%94%B7%E5%9B%A2%E4%B8%8D%E6%95%8C%E6%97%A5%E6%9C%AC%E9%98%9F%E4%B8%A2%E5%86%A0%20%E4%B8%8B%E8%BD%BD%E8%A7%86%E9%A2%91",
+          "score": 114,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-25T01:31:44.591Z",
+          "stale": false
+        },
+        {
+          "rank": 3,
           "title": "中秋节视频短片下载",
           "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E8%A7%86%E9%A2%91%E7%9F%AD%E7%89%87%E4%B8%8B%E8%BD%BD",
-          "score": 150,
-          "growth": -9,
+          "score": 110,
+          "growth": -27,
           "trend": "falling",
           "source": [
             "百度联想 · 百度热搜"
@@ -20,38 +46,12 @@
           "stale": false
         },
         {
-          "rank": 2,
-          "title": "下载中秋图片大全",
-          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E4%B8%AD%E7%A7%8B%E5%9B%BE%E7%89%87%E5%A4%A7%E5%85%A8",
-          "score": 115,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-24T22:25:33.796Z",
-          "stale": false
-        },
-        {
-          "rank": 3,
-          "title": "太平洋下载站",
-          "searchUrl": "https://www.baidu.com/s?wd=%E5%A4%AA%E5%B9%B3%E6%B4%8B%E4%B8%8B%E8%BD%BD%E7%AB%99",
-          "score": 112,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-24T22:25:33.796Z",
-          "stale": false
-        },
-        {
           "rank": 4,
           "title": "中秋节app图片可下载",
           "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82app%E5%9B%BE%E7%89%87%E5%8F%AF%E4%B8%8B%E8%BD%BD",
           "score": 105,
-          "growth": null,
-          "trend": "new",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想 · 百度热搜"
           ],
@@ -73,24 +73,24 @@
         },
         {
           "rank": 6,
-          "title": "中秋节素材下载",
-          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E7%B4%A0%E6%9D%90%E4%B8%8B%E8%BD%BD",
+          "title": "免费下载中秋图片最新版",
+          "searchUrl": "https://www.baidu.com/s?wd=%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD%E4%B8%AD%E7%A7%8B%E5%9B%BE%E7%89%87%E6%9C%80%E6%96%B0%E7%89%88",
           "score": 95,
           "growth": null,
           "trend": "new",
           "source": [
             "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-24T22:25:33.796Z",
+          "firstSeenAt": "2026-09-25T01:31:44.591Z",
           "stale": false
         },
         {
           "rank": 7,
-          "title": "下载个太平洋游戏",
-          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E4%B8%AA%E5%A4%AA%E5%B9%B3%E6%B4%8B%E6%B8%B8%E6%88%8F",
-          "score": 92,
-          "growth": null,
-          "trend": "new",
+          "title": "中秋节素材下载",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E7%B4%A0%E6%9D%90%E4%B8%8B%E8%BD%BD",
+          "score": 85,
+          "growth": -11,
+          "trend": "falling",
           "source": [
             "百度联想 · 百度热搜"
           ],
@@ -99,32 +99,6 @@
         },
         {
           "rank": 8,
-          "title": "跳舞的线中秋节下载",
-          "searchUrl": "https://www.baidu.com/s?wd=%E8%B7%B3%E8%88%9E%E7%9A%84%E7%BA%BF%E4%B8%AD%E7%A7%8B%E8%8A%82%E4%B8%8B%E8%BD%BD",
-          "score": 90,
-          "growth": -13,
-          "trend": "falling",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-24T19:11:11.677Z",
-          "stale": false
-        },
-        {
-          "rank": 9,
-          "title": "app下载免费中秋节",
-          "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E5%85%8D%E8%B4%B9%E4%B8%AD%E7%A7%8B%E8%8A%82",
-          "score": 85,
-          "growth": -8,
-          "trend": "falling",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-24T19:11:11.677Z",
-          "stale": false
-        },
-        {
-          "rank": 10,
           "title": "下载教程地图软件",
           "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B%E5%9C%B0%E5%9B%BE%E8%BD%AF%E4%BB%B6",
           "score": 80,
@@ -137,7 +111,7 @@
           "stale": false
         },
         {
-          "rank": 11,
+          "rank": 9,
           "title": "app下载萌驾",
           "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E8%90%8C%E9%A9%BE",
           "score": 80,
@@ -150,11 +124,11 @@
           "stale": false
         },
         {
-          "rank": 12,
-          "title": "下载中秋节快乐图片",
-          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E4%B8%AD%E7%A7%8B%E8%8A%82%E5%BF%AB%E4%B9%90%E5%9B%BE%E7%89%87",
+          "rank": 10,
+          "title": "app下载免费中秋节",
+          "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E5%85%8D%E8%B4%B9%E4%B8%AD%E7%A7%8B%E8%8A%82",
           "score": 75,
-          "growth": -33,
+          "growth": -12,
           "trend": "falling",
           "source": [
             "百度联想 · 百度热搜"
@@ -163,7 +137,7 @@
           "stale": false
         },
         {
-          "rank": 13,
+          "rank": 11,
           "title": "下载教程:网页链接",
           "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B%3A%E7%BD%91%E9%A1%B5%E9%93%BE%E6%8E%A5",
           "score": 70,
@@ -176,7 +150,7 @@
           "stale": false
         },
         {
-          "rank": 14,
+          "rank": 12,
           "title": "app下载金苗宝",
           "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E9%87%91%E8%8B%97%E5%AE%9D",
           "score": 70,
@@ -189,33 +163,7 @@
           "stale": false
         },
         {
-          "rank": 15,
-          "title": "我的安吉拉中秋节下载",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%88%91%E7%9A%84%E5%AE%89%E5%90%89%E6%8B%89%E4%B8%AD%E7%A7%8B%E8%8A%82%E4%B8%8B%E8%BD%BD",
-          "score": 70,
-          "growth": -17,
-          "trend": "falling",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-24T19:11:11.677Z",
-          "stale": false
-        },
-        {
-          "rank": 16,
-          "title": "中秋节游戏下载",
-          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD",
-          "score": 65,
-          "growth": -21,
-          "trend": "falling",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-24T19:11:11.677Z",
-          "stale": false
-        },
-        {
-          "rank": 17,
+          "rank": 13,
           "title": "软件下载不了怎么办",
           "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E4%B8%8D%E4%BA%86%E6%80%8E%E4%B9%88%E5%8A%9E",
           "score": 60,
@@ -228,7 +176,7 @@
           "stale": false
         },
         {
-          "rank": 18,
+          "rank": 14,
           "title": "下载教程我的世界",
           "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C",
           "score": 60,
@@ -241,7 +189,7 @@
           "stale": false
         },
         {
-          "rank": 19,
+          "rank": 15,
           "title": "app下载手机银行",
           "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E6%89%8B%E6%9C%BA%E9%93%B6%E8%A1%8C",
           "score": 60,
@@ -254,7 +202,20 @@
           "stale": false
         },
         {
-          "rank": 20,
+          "rank": 16,
+          "title": "下载好看的中秋节图片大全",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E5%A5%BD%E7%9C%8B%E7%9A%84%E4%B8%AD%E7%A7%8B%E8%8A%82%E5%9B%BE%E7%89%87%E5%A4%A7%E5%85%A8",
+          "score": 55,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-25T01:31:44.591Z",
+          "stale": false
+        },
+        {
+          "rank": 17,
           "title": "海岛奇兵无限钻石版免费下载教程",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%B5%B7%E5%B2%9B%E5%A5%87%E5%85%B5%E6%97%A0%E9%99%90%E9%92%BB%E7%9F%B3%E7%89%88%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
           "score": 50,
@@ -267,7 +228,7 @@
           "stale": false
         },
         {
-          "rank": 21,
+          "rank": 18,
           "title": "软件下载的英文",
           "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E7%9A%84%E8%8B%B1%E6%96%87",
           "score": 50,
@@ -280,7 +241,20 @@
           "stale": false
         },
         {
-          "rank": 22,
+          "rank": 19,
+          "title": "下载中秋节快乐图片",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%8B%E8%BD%BD%E4%B8%AD%E7%A7%8B%E8%8A%82%E5%BF%AB%E4%B9%90%E5%9B%BE%E7%89%87",
+          "score": 45,
+          "growth": -40,
+          "trend": "falling",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-24T19:11:11.677Z",
+          "stale": false
+        },
+        {
+          "rank": 20,
           "title": "软件下载4.0.3免费oppo安装",
           "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD4.0.3%E5%85%8D%E8%B4%B9oppo%E5%AE%89%E8%A3%85",
           "score": 40,
@@ -293,7 +267,7 @@
           "stale": false
         },
         {
-          "rank": 23,
+          "rank": 21,
           "title": "游戏下载软件taptap",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD%E8%BD%AF%E4%BB%B6taptap",
           "score": 40,
@@ -306,12 +280,12 @@
           "stale": false
         },
         {
-          "rank": 24,
+          "rank": 22,
           "title": "app下载的视频存哪了",
           "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E7%9A%84%E8%A7%86%E9%A2%91%E5%AD%98%E5%93%AA%E4%BA%86",
           "score": 40,
-          "growth": 33,
-          "trend": "rising",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -319,7 +293,7 @@
           "stale": false
         },
         {
-          "rank": 25,
+          "rank": 23,
           "title": "usdt的下载教程",
           "searchUrl": "https://www.baidu.com/s?wd=usdt%E7%9A%84%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
           "score": 40,
@@ -332,12 +306,38 @@
           "stale": false
         },
         {
+          "rank": 24,
+          "title": "跳舞的线中秋节下载",
+          "searchUrl": "https://www.baidu.com/s?wd=%E8%B7%B3%E8%88%9E%E7%9A%84%E7%BA%BF%E4%B8%AD%E7%A7%8B%E8%8A%82%E4%B8%8B%E8%BD%BD",
+          "score": 35,
+          "growth": -61,
+          "trend": "falling",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-24T19:11:11.677Z",
+          "stale": false
+        },
+        {
+          "rank": 25,
+          "title": "中秋节游戏下载",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD",
+          "score": 35,
+          "growth": -46,
+          "trend": "falling",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-24T19:11:11.677Z",
+          "stale": false
+        },
+        {
           "rank": 26,
           "title": "软件下载4.0.3免费vivo下载",
           "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD4.0.3%E5%85%8D%E8%B4%B9vivo%E4%B8%8B%E8%BD%BD",
           "score": 30,
-          "growth": null,
-          "trend": "new",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -372,28 +372,28 @@
         },
         {
           "rank": 29,
-          "title": "软件下载4.0.3免费安卓安装",
-          "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD4.0.3%E5%85%8D%E8%B4%B9%E5%AE%89%E5%8D%93%E5%AE%89%E8%A3%85",
-          "score": 20,
-          "growth": -33,
+          "title": "我的安吉拉中秋节下载",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%88%91%E7%9A%84%E5%AE%89%E5%90%89%E6%8B%89%E4%B8%AD%E7%A7%8B%E8%8A%82%E4%B8%8B%E8%BD%BD",
+          "score": 25,
+          "growth": -64,
           "trend": "falling",
           "source": [
-            "百度联想"
+            "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-23T17:01:06.863Z",
+          "firstSeenAt": "2026-09-24T19:11:11.677Z",
           "stale": false
         },
         {
           "rank": 30,
-          "title": "游戏下载单机",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD%E5%8D%95%E6%9C%BA",
+          "title": "软件下载4.0.3免费安卓安装",
+          "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD4.0.3%E5%85%8D%E8%B4%B9%E5%AE%89%E5%8D%93%E5%AE%89%E8%A3%85",
           "score": 20,
-          "growth": 100,
-          "trend": "rising",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
-          "firstSeenAt": "2026-09-24T19:11:11.677Z",
+          "firstSeenAt": "2026-09-23T17:01:06.863Z",
           "stale": false
         }
       ]
@@ -405,9 +405,22 @@
       "items": [
         {
           "rank": 1,
-          "title": "友谊拼豆闺蜜款图纸",
-          "searchUrl": "https://www.baidu.com/s?wd=%E5%8F%8B%E8%B0%8A%E6%8B%BC%E8%B1%86%E9%97%BA%E8%9C%9C%E6%AC%BE%E5%9B%BE%E7%BA%B8",
-          "score": 122,
+          "title": "拼豆手机壳图纸",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E6%89%8B%E6%9C%BA%E5%A3%B3%E5%9B%BE%E7%BA%B8",
+          "score": 116,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-25T01:31:44.591Z",
+          "stale": false
+        },
+        {
+          "rank": 2,
+          "title": "中秋节拼豆图纸简单又漂亮",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%AE%80%E5%8D%95%E5%8F%88%E6%BC%82%E4%BA%AE",
+          "score": 115,
           "growth": 0,
           "trend": "steady",
           "source": [
@@ -417,36 +430,23 @@
           "stale": false
         },
         {
-          "rank": 2,
-          "title": "中秋节拼豆图纸简单又漂亮",
-          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%AE%80%E5%8D%95%E5%8F%88%E6%BC%82%E4%BA%AE",
-          "score": 115,
-          "growth": 3,
-          "trend": "rising",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-24T19:11:11.677Z",
-          "stale": false
-        },
-        {
           "rank": 3,
-          "title": "中秋节拼豆图纸带色号",
-          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%B8%A6%E8%89%B2%E5%8F%B7",
-          "score": 105,
-          "growth": 3,
-          "trend": "rising",
+          "title": "拼豆手机壳教程图解",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E6%89%8B%E6%9C%BA%E5%A3%B3%E6%95%99%E7%A8%8B%E5%9B%BE%E8%A7%A3",
+          "score": 106,
+          "growth": null,
+          "trend": "new",
           "source": [
             "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-24T19:11:11.677Z",
+          "firstSeenAt": "2026-09-25T01:31:44.591Z",
           "stale": false
         },
         {
           "rank": 4,
-          "title": "拼豆友谊二字",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%8F%8B%E8%B0%8A%E4%BA%8C%E5%AD%97",
-          "score": 102,
+          "title": "中秋节拼豆图纸带色号",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%B8%A6%E8%89%B2%E5%8F%B7",
+          "score": 105,
           "growth": 0,
           "trend": "steady",
           "source": [
@@ -457,15 +457,15 @@
         },
         {
           "rank": 5,
-          "title": "大熊猫拼豆平面图纸",
-          "searchUrl": "https://www.baidu.com/s?wd=%E5%A4%A7%E7%86%8A%E7%8C%AB%E6%8B%BC%E8%B1%86%E5%B9%B3%E9%9D%A2%E5%9B%BE%E7%BA%B8",
-          "score": 97,
-          "growth": 0,
-          "trend": "steady",
+          "title": "用拼豆拼的手机",
+          "searchUrl": "https://www.baidu.com/s?wd=%E7%94%A8%E6%8B%BC%E8%B1%86%E6%8B%BC%E7%9A%84%E6%89%8B%E6%9C%BA",
+          "score": 96,
+          "growth": null,
+          "trend": "new",
           "source": [
             "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-24T19:11:11.677Z",
+          "firstSeenAt": "2026-09-25T01:31:44.591Z",
           "stale": false
         },
         {
@@ -473,8 +473,8 @@
           "title": "中秋节拼豆图纸小图",
           "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%B0%8F%E5%9B%BE",
           "score": 95,
-          "growth": 3,
-          "trend": "rising",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想 · 百度热搜"
           ],
@@ -486,8 +486,8 @@
           "title": "拼豆图纸生成",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%94%9F%E6%88%90",
           "score": 90,
-          "growth": null,
-          "trend": "new",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -496,15 +496,15 @@
         },
         {
           "rank": 8,
-          "title": "大熊猫拼豆大熊猫小型图纸",
-          "searchUrl": "https://www.baidu.com/s?wd=%E5%A4%A7%E7%86%8A%E7%8C%AB%E6%8B%BC%E8%B1%86%E5%A4%A7%E7%86%8A%E7%8C%AB%E5%B0%8F%E5%9E%8B%E5%9B%BE%E7%BA%B8",
-          "score": 87,
-          "growth": 0,
-          "trend": "steady",
+          "title": "高颜值拼豆手机图纸高清",
+          "searchUrl": "https://www.baidu.com/s?wd=%E9%AB%98%E9%A2%9C%E5%80%BC%E6%8B%BC%E8%B1%86%E6%89%8B%E6%9C%BA%E5%9B%BE%E7%BA%B8%E9%AB%98%E6%B8%85",
+          "score": 86,
+          "growth": null,
+          "trend": "new",
           "source": [
             "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-24T19:11:11.677Z",
+          "firstSeenAt": "2026-09-25T01:31:44.591Z",
           "stale": false
         },
         {
@@ -512,8 +512,8 @@
           "title": "中秋节拼豆图纸简单",
           "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%AE%80%E5%8D%95",
           "score": 85,
-          "growth": 4,
-          "trend": "rising",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想 · 百度热搜"
           ],
@@ -535,9 +535,22 @@
         },
         {
           "rank": 11,
-          "title": "大熊猫拼豆最简单三个颜色",
-          "searchUrl": "https://www.baidu.com/s?wd=%E5%A4%A7%E7%86%8A%E7%8C%AB%E6%8B%BC%E8%B1%86%E6%9C%80%E7%AE%80%E5%8D%95%E4%B8%89%E4%B8%AA%E9%A2%9C%E8%89%B2",
-          "score": 77,
+          "title": "怎么用拼豆拼超好看手机壳图纸",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%80%8E%E4%B9%88%E7%94%A8%E6%8B%BC%E8%B1%86%E6%8B%BC%E8%B6%85%E5%A5%BD%E7%9C%8B%E6%89%8B%E6%9C%BA%E5%A3%B3%E5%9B%BE%E7%BA%B8",
+          "score": 76,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-25T01:31:44.591Z",
+          "stale": false
+        },
+        {
+          "rank": 12,
+          "title": "中秋节拼豆图纸小鼻嘎",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%B0%8F%E9%BC%BB%E5%98%8E",
+          "score": 75,
           "growth": 0,
           "trend": "steady",
           "source": [
@@ -547,33 +560,7 @@
           "stale": false
         },
         {
-          "rank": 12,
-          "title": "中秋节拼豆图纸小鼻嘎",
-          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%B0%8F%E9%BC%BB%E5%98%8E",
-          "score": 75,
-          "growth": 4,
-          "trend": "rising",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-24T19:11:11.677Z",
-          "stale": false
-        },
-        {
           "rank": 13,
-          "title": "三人拼豆友谊拼豆图",
-          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%89%E4%BA%BA%E6%8B%BC%E8%B1%86%E5%8F%8B%E8%B0%8A%E6%8B%BC%E8%B1%86%E5%9B%BE",
-          "score": 72,
-          "growth": 16,
-          "trend": "rising",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-24T19:11:11.677Z",
-          "stale": false
-        },
-        {
-          "rank": 14,
           "title": "游戏拼豆图纸贴画",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%B8%B8%E6%88%8F%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E8%B4%B4%E7%94%BB",
           "score": 70,
@@ -586,10 +573,23 @@
           "stale": false
         },
         {
+          "rank": 14,
+          "title": "用拼豆拼拼手机屏幕怎么拼",
+          "searchUrl": "https://www.baidu.com/s?wd=%E7%94%A8%E6%8B%BC%E8%B1%86%E6%8B%BC%E6%8B%BC%E6%89%8B%E6%9C%BA%E5%B1%8F%E5%B9%95%E6%80%8E%E4%B9%88%E6%8B%BC",
+          "score": 66,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-25T01:31:44.591Z",
+          "stale": false
+        },
+        {
           "rank": 15,
-          "title": "简单又好看的大熊猫拼豆",
-          "searchUrl": "https://www.baidu.com/s?wd=%E7%AE%80%E5%8D%95%E5%8F%88%E5%A5%BD%E7%9C%8B%E7%9A%84%E5%A4%A7%E7%86%8A%E7%8C%AB%E6%8B%BC%E8%B1%86",
-          "score": 67,
+          "title": "中秋节拼豆图纸迷你",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E8%BF%B7%E4%BD%A0",
+          "score": 65,
           "growth": 0,
           "trend": "steady",
           "source": [
@@ -600,19 +600,6 @@
         },
         {
           "rank": 16,
-          "title": "中秋节拼豆图纸迷你",
-          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E8%BF%B7%E4%BD%A0",
-          "score": 65,
-          "growth": 5,
-          "trend": "rising",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-24T19:11:11.677Z",
-          "stale": false
-        },
-        {
-          "rank": 17,
           "title": "拼豆图纸高颜值好看",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E9%AB%98%E9%A2%9C%E5%80%BC%E5%A5%BD%E7%9C%8B",
           "score": 60,
@@ -625,12 +612,25 @@
           "stale": false
         },
         {
+          "rank": 17,
+          "title": "拼豆手机图片",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E6%89%8B%E6%9C%BA%E5%9B%BE%E7%89%87",
+          "score": 56,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-25T01:31:44.591Z",
+          "stale": false
+        },
+        {
           "rank": 18,
           "title": "中秋节拼豆图纸玉兔",
           "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%8E%89%E5%85%94",
           "score": 55,
-          "growth": 6,
-          "trend": "rising",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想 · 百度热搜"
           ],
@@ -642,8 +642,8 @@
           "title": "拼豆图纸三角洲",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E4%B8%89%E8%A7%92%E6%B4%B2",
           "score": 50,
-          "growth": 25,
-          "trend": "rising",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -665,15 +665,15 @@
         },
         {
           "rank": 21,
-          "title": "熊猫拼豆高清可爱版",
-          "searchUrl": "https://www.baidu.com/s?wd=%E7%86%8A%E7%8C%AB%E6%8B%BC%E8%B1%86%E9%AB%98%E6%B8%85%E5%8F%AF%E7%88%B1%E7%89%88",
-          "score": 47,
-          "growth": 0,
-          "trend": "steady",
+          "title": "求了求了求了拼豆图纸我手机在那儿不",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%B1%82%E4%BA%86%E6%B1%82%E4%BA%86%E6%B1%82%E4%BA%86%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E6%88%91%E6%89%8B%E6%9C%BA%E5%9C%A8%E9%82%A3%E5%84%BF%E4%B8%8D",
+          "score": 46,
+          "growth": null,
+          "trend": "new",
           "source": [
             "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-24T19:11:11.677Z",
+          "firstSeenAt": "2026-09-25T01:31:44.591Z",
           "stale": false
         },
         {
@@ -681,8 +681,8 @@
           "title": "中秋节拼豆图纸立体",
           "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%AB%8B%E4%BD%93",
           "score": 45,
-          "growth": 7,
-          "trend": "rising",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想 · 百度热搜"
           ],
@@ -707,8 +707,8 @@
           "title": "拼豆图纸小型",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%B0%8F%E5%9E%8B",
           "score": 40,
-          "growth": -20,
-          "trend": "falling",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -717,9 +717,22 @@
         },
         {
           "rank": 25,
-          "title": "熊猫拼豆高清图纸带色号下载",
-          "searchUrl": "https://www.baidu.com/s?wd=%E7%86%8A%E7%8C%AB%E6%8B%BC%E8%B1%86%E9%AB%98%E6%B8%85%E5%9B%BE%E7%BA%B8%E5%B8%A6%E8%89%B2%E5%8F%B7%E4%B8%8B%E8%BD%BD",
-          "score": 37,
+          "title": "拼豆拼的手机形状图片",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E6%8B%BC%E7%9A%84%E6%89%8B%E6%9C%BA%E5%BD%A2%E7%8A%B6%E5%9B%BE%E7%89%87",
+          "score": 36,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-25T01:31:44.591Z",
+          "stale": false
+        },
+        {
+          "rank": 26,
+          "title": "中秋节拼豆图纸",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8",
+          "score": 35,
           "growth": 0,
           "trend": "steady",
           "source": [
@@ -729,33 +742,7 @@
           "stale": false
         },
         {
-          "rank": 26,
-          "title": "中秋节拼豆图纸",
-          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8",
-          "score": 35,
-          "growth": 9,
-          "trend": "rising",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-24T19:11:11.677Z",
-          "stale": false
-        },
-        {
           "rank": 27,
-          "title": "友谊拼豆图片",
-          "searchUrl": "https://www.baidu.com/s?wd=%E5%8F%8B%E8%B0%8A%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%89%87",
-          "score": 32,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-24T22:25:33.796Z",
-          "stale": false
-        },
-        {
-          "rank": 28,
           "title": "第五人格角色拼豆",
           "searchUrl": "https://www.baidu.com/s?wd=%E7%AC%AC%E4%BA%94%E4%BA%BA%E6%A0%BC%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86",
           "score": 30,
@@ -768,7 +755,7 @@
           "stale": false
         },
         {
-          "rank": 29,
+          "rank": 28,
           "title": "拼豆图纸人物",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E4%BA%BA%E7%89%A9",
           "score": 30,
@@ -781,7 +768,7 @@
           "stale": false
         },
         {
-          "rank": 30,
+          "rank": 29,
           "title": "游戏拼豆是什么意思啊",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%B8%B8%E6%88%8F%E6%8B%BC%E8%B1%86%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D%E5%95%8A",
           "score": 30,
@@ -791,6 +778,19 @@
             "百度联想"
           ],
           "firstSeenAt": "2026-09-22T09:58:40.392Z",
+          "stale": false
+        },
+        {
+          "rank": 30,
+          "title": "中秋节拼豆超大图纸带色号",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E6%8B%BC%E8%B1%86%E8%B6%85%E5%A4%A7%E5%9B%BE%E7%BA%B8%E5%B8%A6%E8%89%B2%E5%8F%B7",
+          "score": 25,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-25T01:31:44.591Z",
           "stale": false
         }
       ]
@@ -815,7 +815,7 @@
     {
       "name": "百度联想",
       "ok": true,
-      "count": 354
+      "count": 346
     }
   ]
 }
