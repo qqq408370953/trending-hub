@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-28T15:29:32.618Z",
+  "lastUpdated": "2026-09-28T22:02:04.377Z",
   "categories": {
     "downloads": {
       "name": "下载热点",
@@ -8,6 +8,19 @@
       "items": [
         {
           "rank": 1,
+          "title": "补贴APP下载",
+          "searchUrl": "https://www.baidu.com/s?wd=%E8%A1%A5%E8%B4%B4APP%E4%B8%8B%E8%BD%BD",
+          "score": 110,
+          "growth": 10,
+          "trend": "rising",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-28T15:29:32.618Z",
+          "stale": false
+        },
+        {
+          "rank": 2,
           "title": "怎么下载我的世界",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%80%8E%E4%B9%88%E4%B8%8B%E8%BD%BD%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C",
           "score": 100,
@@ -17,19 +30,6 @@
             "百度联想"
           ],
           "firstSeenAt": "2026-09-24T19:11:11.677Z",
-          "stale": false
-        },
-        {
-          "rank": 2,
-          "title": "补贴APP下载",
-          "searchUrl": "https://www.baidu.com/s?wd=%E8%A1%A5%E8%B4%B4APP%E4%B8%8B%E8%BD%BD",
-          "score": 100,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想 · 百度热搜"
-          ],
-          "firstSeenAt": "2026-09-28T15:29:32.618Z",
           "stale": false
         },
         {
@@ -50,8 +50,8 @@
           "title": "在哪可以下载正版我的世界",
           "searchUrl": "https://www.baidu.com/s?wd=%E5%9C%A8%E5%93%AA%E5%8F%AF%E4%BB%A5%E4%B8%8B%E8%BD%BD%E6%AD%A3%E7%89%88%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C",
           "score": 80,
-          "growth": null,
-          "trend": "new",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -102,8 +102,8 @@
           "title": "在哪下载12306购票软件",
           "searchUrl": "https://www.baidu.com/s?wd=%E5%9C%A8%E5%93%AA%E4%B8%8B%E8%BD%BD12306%E8%B4%AD%E7%A5%A8%E8%BD%AF%E4%BB%B6",
           "score": 70,
-          "growth": null,
-          "trend": "new",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -128,8 +128,8 @@
           "title": "歌曲在哪儿能免费下载",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%AD%8C%E6%9B%B2%E5%9C%A8%E5%93%AA%E5%84%BF%E8%83%BD%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD",
           "score": 60,
-          "growth": null,
-          "trend": "new",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -141,8 +141,8 @@
           "title": "软件下载豆包",
           "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E8%B1%86%E5%8C%85",
           "score": 60,
-          "growth": null,
-          "trend": "new",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -167,8 +167,8 @@
           "title": "app下载四川人社",
           "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E5%9B%9B%E5%B7%9D%E4%BA%BA%E7%A4%BE",
           "score": 60,
-          "growth": null,
-          "trend": "new",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -193,8 +193,8 @@
           "title": "剪映在哪下载最好",
           "searchUrl": "https://www.baidu.com/s?wd=%E5%89%AA%E6%98%A0%E5%9C%A8%E5%93%AA%E4%B8%8B%E8%BD%BD%E6%9C%80%E5%A5%BD",
           "score": 50,
-          "growth": null,
-          "trend": "new",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -203,15 +203,15 @@
         },
         {
           "rank": 16,
-          "title": "软件下载的英文",
-          "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E7%9A%84%E8%8B%B1%E6%96%87",
+          "title": "软件下载记录在哪看",
+          "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E8%AE%B0%E5%BD%95%E5%9C%A8%E5%93%AA%E7%9C%8B",
           "score": 50,
           "growth": null,
           "trend": "new",
           "source": [
             "百度联想"
           ],
-          "firstSeenAt": "2026-09-28T15:29:32.618Z",
+          "firstSeenAt": "2026-09-28T22:02:04.377Z",
           "stale": false
         },
         {
@@ -219,8 +219,8 @@
           "title": "app下载手机银行",
           "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E6%89%8B%E6%9C%BA%E9%93%B6%E8%A1%8C",
           "score": 50,
-          "growth": -17,
-          "trend": "falling",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -232,8 +232,8 @@
           "title": "软件下载4.0.3免费oppo安装",
           "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD4.0.3%E5%85%8D%E8%B4%B9oppo%E5%AE%89%E8%A3%85",
           "score": 40,
-          "growth": -33,
-          "trend": "falling",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -258,8 +258,8 @@
           "title": "在哪下载手机铃声免费",
           "searchUrl": "https://www.baidu.com/s?wd=%E5%9C%A8%E5%93%AA%E4%B8%8B%E8%BD%BD%E6%89%8B%E6%9C%BA%E9%93%83%E5%A3%B0%E5%85%8D%E8%B4%B9",
           "score": 40,
-          "growth": null,
-          "trend": "new",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -271,8 +271,8 @@
           "title": "theone陪伴ai下载教程",
           "searchUrl": "https://www.baidu.com/s?wd=theone%E9%99%AA%E4%BC%B4ai%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
           "score": 40,
-          "growth": 33,
-          "trend": "rising",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -281,11 +281,24 @@
         },
         {
           "rank": 22,
+          "title": "补贴下载什么软件",
+          "searchUrl": "https://www.baidu.com/s?wd=%E8%A1%A5%E8%B4%B4%E4%B8%8B%E8%BD%BD%E4%BB%80%E4%B9%88%E8%BD%AF%E4%BB%B6",
+          "score": 40,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-28T22:02:04.377Z",
+          "stale": false
+        },
+        {
+          "rank": 23,
           "title": "软件下载4.0.3免费oppo版本大全",
           "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD4.0.3%E5%85%8D%E8%B4%B9oppo%E7%89%88%E6%9C%AC%E5%A4%A7%E5%85%A8",
           "score": 30,
-          "growth": -25,
-          "trend": "falling",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -293,12 +306,12 @@
           "stale": false
         },
         {
-          "rank": 23,
+          "rank": 24,
           "title": "圣经在哪个软件下载",
           "searchUrl": "https://www.baidu.com/s?wd=%E5%9C%A3%E7%BB%8F%E5%9C%A8%E5%93%AA%E4%B8%AA%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD",
           "score": 30,
-          "growth": null,
-          "trend": "new",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -306,12 +319,12 @@
           "stale": false
         },
         {
-          "rank": 24,
+          "rank": 25,
           "title": "游戏下载排行榜前十名手游",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD%E6%8E%92%E8%A1%8C%E6%A6%9C%E5%89%8D%E5%8D%81%E5%90%8D%E6%89%8B%E6%B8%B8",
           "score": 30,
-          "growth": 50,
-          "trend": "rising",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -319,12 +332,12 @@
           "stale": false
         },
         {
-          "rank": 25,
+          "rank": 26,
           "title": "app下载千鸟物联",
           "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E5%8D%83%E9%B8%9F%E7%89%A9%E8%81%94",
           "score": 30,
-          "growth": null,
-          "trend": "new",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -332,12 +345,12 @@
           "stale": false
         },
         {
-          "rank": 26,
+          "rank": 27,
           "title": "usdt的下载教程",
           "searchUrl": "https://www.baidu.com/s?wd=usdt%E7%9A%84%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
           "score": 30,
-          "growth": -25,
-          "trend": "falling",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -345,12 +358,12 @@
           "stale": false
         },
         {
-          "rank": 27,
+          "rank": 28,
           "title": "软件下载vivo手机版免费安装",
           "searchUrl": "https://www.baidu.com/s?wd=%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BDvivo%E6%89%8B%E6%9C%BA%E7%89%88%E5%85%8D%E8%B4%B9%E5%AE%89%E8%A3%85",
           "score": 20,
-          "growth": -33,
-          "trend": "falling",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -358,7 +371,7 @@
           "stale": false
         },
         {
-          "rank": 28,
+          "rank": 29,
           "title": "王者荣耀老版本单机版下载教程",
           "searchUrl": "https://www.baidu.com/s?wd=%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E8%80%81%E7%89%88%E6%9C%AC%E5%8D%95%E6%9C%BA%E7%89%88%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B",
           "score": 20,
@@ -371,29 +384,16 @@
           "stale": false
         },
         {
-          "rank": 29,
-          "title": "在哪可以下载电子营业执照",
-          "searchUrl": "https://www.baidu.com/s?wd=%E5%9C%A8%E5%93%AA%E5%8F%AF%E4%BB%A5%E4%B8%8B%E8%BD%BD%E7%94%B5%E5%AD%90%E8%90%A5%E4%B8%9A%E6%89%A7%E7%85%A7",
+          "rank": 30,
+          "title": "游戏下载单机",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD%E5%8D%95%E6%9C%BA",
           "score": 20,
           "growth": null,
           "trend": "new",
           "source": [
             "百度联想"
           ],
-          "firstSeenAt": "2026-09-28T15:29:32.618Z",
-          "stale": false
-        },
-        {
-          "rank": 30,
-          "title": "app下载的视频存哪了",
-          "searchUrl": "https://www.baidu.com/s?wd=app%E4%B8%8B%E8%BD%BD%E7%9A%84%E8%A7%86%E9%A2%91%E5%AD%98%E5%93%AA%E4%BA%86",
-          "score": 20,
-          "growth": -60,
-          "trend": "falling",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-26T01:35:19.191Z",
+          "firstSeenAt": "2026-09-28T22:02:04.377Z",
           "stale": false
         }
       ]
@@ -408,8 +408,8 @@
           "title": "拼豆上班ing图纸",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E4%B8%8A%E7%8F%ADing%E5%9B%BE%E7%BA%B8",
           "score": 117,
-          "growth": null,
-          "trend": "new",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想 · 百度热搜"
           ],
@@ -418,24 +418,89 @@
         },
         {
           "rank": 2,
-          "title": "王曼昱拼豆图纸参考图",
-          "searchUrl": "https://www.baidu.com/s?wd=%E7%8E%8B%E6%9B%BC%E6%98%B1%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%8F%82%E8%80%83%E5%9B%BE",
+          "title": "拼豆中国图纸大全",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E4%B8%AD%E5%9B%BD%E5%9B%BE%E7%BA%B8%E5%A4%A7%E5%85%A8",
           "score": 116,
           "growth": null,
           "trend": "new",
           "source": [
             "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-28T15:29:32.618Z",
+          "firstSeenAt": "2026-09-28T22:02:04.377Z",
           "stale": false
         },
         {
           "rank": 3,
+          "title": "12306标志拼豆",
+          "searchUrl": "https://www.baidu.com/s?wd=12306%E6%A0%87%E5%BF%97%E6%8B%BC%E8%B1%86",
+          "score": 111,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-28T22:02:04.377Z",
+          "stale": false
+        },
+        {
+          "rank": 4,
+          "title": "中秋节女生拼豆",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E7%A7%8B%E8%8A%82%E5%A5%B3%E7%94%9F%E6%8B%BC%E8%B1%86",
+          "score": 109,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-28T22:02:04.377Z",
+          "stale": false
+        },
+        {
+          "rank": 5,
+          "title": "女生最爱拼豆图100张关于中秋节的",
+          "searchUrl": "https://www.baidu.com/s?wd=%E5%A5%B3%E7%94%9F%E6%9C%80%E7%88%B1%E6%8B%BC%E8%B1%86%E5%9B%BE100%E5%BC%A0%E5%85%B3%E4%BA%8E%E4%B8%AD%E7%A7%8B%E8%8A%82%E7%9A%84",
+          "score": 99,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-28T22:02:04.377Z",
+          "stale": false
+        },
+        {
+          "rank": 6,
+          "title": "拼豆拼一个老人的图片搞笑",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E6%8B%BC%E4%B8%80%E4%B8%AA%E8%80%81%E4%BA%BA%E7%9A%84%E5%9B%BE%E7%89%87%E6%90%9E%E7%AC%91",
+          "score": 98,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-28T22:02:04.377Z",
+          "stale": false
+        },
+        {
+          "rank": 7,
+          "title": "拼豆图纸100张中国",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8100%E5%BC%A0%E4%B8%AD%E5%9B%BD",
+          "score": 96,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-28T22:02:04.377Z",
+          "stale": false
+        },
+        {
+          "rank": 8,
           "title": "拼豆图纸上班族打工",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E4%B8%8A%E7%8F%AD%E6%97%8F%E6%89%93%E5%B7%A5",
           "score": 87,
-          "growth": null,
-          "trend": "new",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想 · 百度热搜"
           ],
@@ -443,7 +508,20 @@
           "stale": false
         },
         {
-          "rank": 4,
+          "rank": 9,
+          "title": "用拼豆做天才少年勋章及其他勋章",
+          "searchUrl": "https://www.baidu.com/s?wd=%E7%94%A8%E6%8B%BC%E8%B1%86%E5%81%9A%E5%A4%A9%E6%89%8D%E5%B0%91%E5%B9%B4%E5%8B%8B%E7%AB%A0%E5%8F%8A%E5%85%B6%E4%BB%96%E5%8B%8B%E7%AB%A0",
+          "score": 86,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-28T22:02:04.377Z",
+          "stale": false
+        },
+        {
+          "rank": 10,
           "title": "拼豆图纸生成",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%94%9F%E6%88%90",
           "score": 80,
@@ -456,12 +534,12 @@
           "stale": false
         },
         {
-          "rank": 5,
+          "rank": 11,
           "title": "游戏拼豆图纸贴画",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%B8%B8%E6%88%8F%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E8%B4%B4%E7%94%BB",
           "score": 80,
-          "growth": 60,
-          "trend": "rising",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -469,7 +547,20 @@
           "stale": false
         },
         {
-          "rank": 6,
+          "rank": 12,
+          "title": "中国拼豆图纸对联",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%AF%B9%E8%81%94",
+          "score": 76,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-28T22:02:04.377Z",
+          "stale": false
+        },
+        {
+          "rank": 13,
           "title": "拼豆图纸可爱小图案",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%8F%AF%E7%88%B1%E5%B0%8F%E5%9B%BE%E6%A1%88",
           "score": 70,
@@ -482,7 +573,33 @@
           "stale": false
         },
         {
-          "rank": 7,
+          "rank": 14,
+          "title": "拼豆买卖合同",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E4%B9%B0%E5%8D%96%E5%90%88%E5%90%8C",
+          "score": 64,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-28T22:02:04.377Z",
+          "stale": false
+        },
+        {
+          "rank": 15,
+          "title": "年轻人喜欢的拼豆图纸",
+          "searchUrl": "https://www.baidu.com/s?wd=%E5%B9%B4%E8%BD%BB%E4%BA%BA%E5%96%9C%E6%AC%A2%E7%9A%84%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8",
+          "score": 63,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-28T22:02:04.377Z",
+          "stale": false
+        },
+        {
+          "rank": 16,
           "title": "拼豆图纸高颜值好看",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E9%AB%98%E9%A2%9C%E5%80%BC%E5%A5%BD%E7%9C%8B",
           "score": 60,
@@ -495,7 +612,20 @@
           "stale": false
         },
         {
-          "rank": 8,
+          "rank": 17,
+          "title": "拼豆拍照相框图纸100张图片极小",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E6%8B%8D%E7%85%A7%E7%9B%B8%E6%A1%86%E5%9B%BE%E7%BA%B8100%E5%BC%A0%E5%9B%BE%E7%89%87%E6%9E%81%E5%B0%8F",
+          "score": 58,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-28T22:02:04.377Z",
+          "stale": false
+        },
+        {
+          "rank": 18,
           "title": "拼豆图纸人物",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E4%BA%BA%E7%89%A9",
           "score": 50,
@@ -508,7 +638,7 @@
           "stale": false
         },
         {
-          "rank": 9,
+          "rank": 19,
           "title": "奇喵君全部角色拼豆",
           "searchUrl": "https://www.baidu.com/s?wd=%E5%A5%87%E5%96%B5%E5%90%9B%E5%85%A8%E9%83%A8%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86",
           "score": 50,
@@ -521,50 +651,37 @@
           "stale": false
         },
         {
-          "rank": 10,
-          "title": "凹凸世界所有角色拼豆",
-          "searchUrl": "https://www.baidu.com/s?wd=%E5%87%B9%E5%87%B8%E4%B8%96%E7%95%8C%E6%89%80%E6%9C%89%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86",
-          "score": 40,
-          "growth": 300,
-          "trend": "rising",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-28T06:55:47.984Z",
-          "stale": false
-        },
-        {
-          "rank": 11,
-          "title": "拼豆图纸可爱",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%8F%AF%E7%88%B1",
-          "score": 40,
-          "growth": 0,
-          "trend": "steady",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-26T07:43:38.625Z",
-          "stale": false
-        },
-        {
-          "rank": 12,
-          "title": "用拼豆做不想上班",
-          "searchUrl": "https://www.baidu.com/s?wd=%E7%94%A8%E6%8B%BC%E8%B1%86%E5%81%9A%E4%B8%8D%E6%83%B3%E4%B8%8A%E7%8F%AD",
-          "score": 37,
+          "rank": 20,
+          "title": "中国拼豆武器",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E6%8B%BC%E8%B1%86%E6%AD%A6%E5%99%A8",
+          "score": 46,
           "growth": null,
           "trend": "new",
           "source": [
             "百度联想 · 百度热搜"
           ],
+          "firstSeenAt": "2026-09-28T22:02:04.377Z",
+          "stale": false
+        },
+        {
+          "rank": 21,
+          "title": "传说之下所有角色拼豆",
+          "searchUrl": "https://www.baidu.com/s?wd=%E4%BC%A0%E8%AF%B4%E4%B9%8B%E4%B8%8B%E6%89%80%E6%9C%89%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86",
+          "score": 40,
+          "growth": 100,
+          "trend": "rising",
+          "source": [
+            "百度联想"
+          ],
           "firstSeenAt": "2026-09-28T15:29:32.618Z",
           "stale": false
         },
         {
-          "rank": 13,
+          "rank": 22,
           "title": "拼豆图纸小鼻嘎",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%B0%8F%E9%BC%BB%E5%98%8E",
-          "score": 30,
-          "growth": 50,
+          "score": 40,
+          "growth": 33,
           "trend": "rising",
           "source": [
             "百度联想"
@@ -573,7 +690,33 @@
           "stale": false
         },
         {
-          "rank": 14,
+          "rank": 23,
+          "title": "凹凸世界所有角色拼豆",
+          "searchUrl": "https://www.baidu.com/s?wd=%E5%87%B9%E5%87%B8%E4%B8%96%E7%95%8C%E6%89%80%E6%9C%89%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86",
+          "score": 30,
+          "growth": -25,
+          "trend": "falling",
+          "source": [
+            "百度联想"
+          ],
+          "firstSeenAt": "2026-09-28T06:55:47.984Z",
+          "stale": false
+        },
+        {
+          "rank": 24,
+          "title": "拼豆图纸简单又好看",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%AE%80%E5%8D%95%E5%8F%88%E5%A5%BD%E7%9C%8B",
+          "score": 30,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想"
+          ],
+          "firstSeenAt": "2026-09-28T22:02:04.377Z",
+          "stale": false
+        },
+        {
+          "rank": 25,
           "title": "游戏拼豆是什么意思啊",
           "searchUrl": "https://www.baidu.com/s?wd=%E6%B8%B8%E6%88%8F%E6%8B%BC%E8%B1%86%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D%E5%95%8A",
           "score": 30,
@@ -586,38 +729,38 @@
           "stale": false
         },
         {
-          "rank": 15,
-          "title": "赵露思Q版个角色拼豆",
-          "searchUrl": "https://www.baidu.com/s?wd=%E8%B5%B5%E9%9C%B2%E6%80%9DQ%E7%89%88%E4%B8%AA%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86",
-          "score": 30,
-          "growth": 50,
-          "trend": "rising",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-28T06:55:47.984Z",
-          "stale": false
-        },
-        {
-          "rank": 16,
-          "title": "传说之下所有角色拼豆",
-          "searchUrl": "https://www.baidu.com/s?wd=%E4%BC%A0%E8%AF%B4%E4%B9%8B%E4%B8%8B%E6%89%80%E6%9C%89%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86",
-          "score": 20,
+          "rank": 26,
+          "title": "拼豆图纸关于中国",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%85%B3%E4%BA%8E%E4%B8%AD%E5%9B%BD",
+          "score": 26,
           "growth": null,
           "trend": "new",
           "source": [
-            "百度联想"
+            "百度联想 · 百度热搜"
           ],
-          "firstSeenAt": "2026-09-28T15:29:32.618Z",
+          "firstSeenAt": "2026-09-28T22:02:04.377Z",
           "stale": false
         },
         {
-          "rank": 17,
-          "title": "拼豆图纸鬼灭之刃",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E9%AC%BC%E7%81%AD%E4%B9%8B%E5%88%83",
+          "rank": 27,
+          "title": "拼豆图纸可爱",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E5%8F%AF%E7%88%B1",
           "score": 20,
-          "growth": 100,
-          "trend": "rising",
+          "growth": -50,
+          "trend": "falling",
+          "source": [
+            "百度联想"
+          ],
+          "firstSeenAt": "2026-09-26T07:43:38.625Z",
+          "stale": false
+        },
+        {
+          "rank": 28,
+          "title": "赵露思Q版个角色拼豆",
+          "searchUrl": "https://www.baidu.com/s?wd=%E8%B5%B5%E9%9C%B2%E6%80%9DQ%E7%89%88%E4%B8%AA%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86",
+          "score": 20,
+          "growth": -33,
+          "trend": "falling",
           "source": [
             "百度联想"
           ],
@@ -625,25 +768,25 @@
           "stale": false
         },
         {
-          "rank": 18,
+          "rank": 29,
+          "title": "拼豆拼一个老人的图片",
+          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E6%8B%BC%E4%B8%80%E4%B8%AA%E8%80%81%E4%BA%BA%E7%9A%84%E5%9B%BE%E7%89%87",
+          "score": 18,
+          "growth": null,
+          "trend": "new",
+          "source": [
+            "百度联想 · 百度热搜"
+          ],
+          "firstSeenAt": "2026-09-28T22:02:04.377Z",
+          "stale": false
+        },
+        {
+          "rank": 30,
           "title": "角色拼豆APP图90色",
           "searchUrl": "https://www.baidu.com/s?wd=%E8%A7%92%E8%89%B2%E6%8B%BC%E8%B1%86APP%E5%9B%BE90%E8%89%B2",
           "score": 10,
-          "growth": null,
-          "trend": "new",
-          "source": [
-            "百度联想"
-          ],
-          "firstSeenAt": "2026-09-28T15:29:32.618Z",
-          "stale": false
-        },
-        {
-          "rank": 19,
-          "title": "拼豆图纸线条小狗",
-          "searchUrl": "https://www.baidu.com/s?wd=%E6%8B%BC%E8%B1%86%E5%9B%BE%E7%BA%B8%E7%BA%BF%E6%9D%A1%E5%B0%8F%E7%8B%97",
-          "score": 10,
-          "growth": null,
-          "trend": "new",
+          "growth": 0,
+          "trend": "steady",
           "source": [
             "百度联想"
           ],
@@ -672,7 +815,7 @@
     {
       "name": "百度联想",
       "ok": true,
-      "count": 452
+      "count": 478
     }
   ]
 }
