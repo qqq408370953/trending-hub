@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-03T13:23:51.749Z",
+  "lastUpdated": "2026-10-03T17:57:30.579Z",
   "categories": {
     "downloads": {
       "name": "下载热点",
@@ -814,8 +814,8 @@
     },
     {
       "name": "百度联想",
-      "ok": true,
-      "count": 80
+      "ok": false,
+      "count": 0
     }
   ]
 }
